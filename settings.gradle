@@ -1,0 +1,2 @@
+rootProject.name='Moodi'
+include ':app'
