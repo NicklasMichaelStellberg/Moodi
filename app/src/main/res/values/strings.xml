@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Moodi</string>
+    <string name="unen_maara">Unen määrä</string>
+    <string name="paivan_pahin_masentuneisuus">Päivän pahin masentuneisuus</string>
+    <string name="paivan_kiihtynein_olo">Päivän kiihtynein olo</string>
+    <string name="paivan_arsyyntynein_olo">Päivän ärsyyntynein olo</string>
+    <string name="paivan_ahditunein_olo">Päivän ahdistunein olo</string>
+    <string name="otetut_laakkeet">Otetut lääkkeet</string>
+    <string name="muistiinpanot">Muistiinpanot</string>
 </resources>
