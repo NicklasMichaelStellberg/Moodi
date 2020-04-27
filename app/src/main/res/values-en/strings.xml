@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Moodi</string>
-    <string name="unen_maara">Last night\'s sleep</string>
-    <string name="paivan_pahin_masentuneisuus">Worst depression of the day</string>
-    <string name="paivan_kiihtynein_olo">Worst agitation of the day</string>
-    <string name="paivan_arsyyntynein_olo">Worst irritation of the day</string>
-    <string name="paivan_ahditunein_olo">Worst anxiety of the day</string>
+    <string name="unen_maara">Last night sleep</string>
+    <string name="paivan_pahin_masentuneisuus">Day\'s worst depression</string>
+    <string name="paivan_kiihtynein_olo">Day\'s worst agitation</string>
+    <string name="paivan_arsyyntynein_olo">Day¨s worst  irritability</string>
+    <string name="paivan_ahditunein_olo">Day\'s worst anxiety</string>
     <string name="otetut_laakkeet">Taken medicine</string>
     <string name="muistiinpanot">Notes</string>
     <string name="one">1</string>
