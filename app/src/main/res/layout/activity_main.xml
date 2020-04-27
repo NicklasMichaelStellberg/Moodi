@@ -24,7 +24,7 @@
         android:id="@+id/ahdistusRadio1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1"
+        android:text="@string/one"
         app:layout_constraintBaseline_toBaselineOf="@+id/ahdistusRadio2"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toStartOf="@+id/kiihtunutRadio2"
@@ -37,7 +37,7 @@
         android:id="@+id/ahdistusRadio2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2"
+        android:text="@string/two"
         app:layout_constraintBaseline_toBaselineOf="@+id/ahdistusRadio3"
         app:layout_constraintEnd_toStartOf="@+id/kiihtunutRadio3"
         app:layout_constraintStart_toEndOf="@+id/kiihtunutRadio1" />
@@ -46,7 +46,7 @@
         android:id="@+id/ahdistusRadio3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="3"
+        android:text="@string/three"
         app:layout_constraintBaseline_toBaselineOf="@+id/ahdistusRadio4"
         app:layout_constraintEnd_toStartOf="@+id/kiihtunutRadio4"
         app:layout_constraintStart_toEndOf="@+id/kiihtunutRadio2" />
@@ -55,7 +55,7 @@
         android:id="@+id/ahdistusRadio4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="4"
+        android:text="@string/four"
         app:layout_constraintBaseline_toBaselineOf="@+id/ahdistusRadio5"
         app:layout_constraintEnd_toStartOf="@+id/ahdistusRadio5"
         app:layout_constraintHorizontal_bias="0.507"
@@ -65,7 +65,7 @@
         android:id="@+id/ahdistusRadio5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="5"
+        android:text="@string/five"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.485"
@@ -79,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:text="1"
+        android:text="@string/one"
         app:layout_constraintBaseline_toBaselineOf="@+id/arsutusRadio2"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -87,7 +87,7 @@
         android:id="@+id/arsutusRadio4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="4"
+        android:text="@string/four"
         app:layout_constraintBaseline_toBaselineOf="@+id/arsutusRadio5"
         app:layout_constraintEnd_toStartOf="@+id/arsutusRadio5"
         app:layout_constraintStart_toEndOf="@+id/arsutusRadio3" />
@@ -98,7 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
         android:layout_marginLeft="2dp"
-        android:text="3"
+        android:text="@string/three"
         app:layout_constraintBaseline_toBaselineOf="@+id/arsutusRadio4"
         app:layout_constraintEnd_toStartOf="@+id/arsutusRadio4"
         app:layout_constraintStart_toEndOf="@+id/arsutusRadio2" />
@@ -109,7 +109,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
-        android:text="2"
+        android:text="@string/two"
         app:layout_constraintBaseline_toBaselineOf="@+id/arsutusRadio3"
         app:layout_constraintStart_toEndOf="@+id/arsutusRadio1" />
 
@@ -315,7 +315,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:checked="false"
-        android:text="4"
+        android:text="@string/four"
         app:layout_constraintBaseline_toBaselineOf="@+id/masennusRadio5"
         app:layout_constraintEnd_toStartOf="@+id/masennusRadio5" />
 
@@ -326,7 +326,7 @@
         android:layout_marginEnd="38dp"
         android:layout_marginRight="38dp"
         android:checked="false"
-        android:text="3"
+        android:text="@string/three"
         app:layout_constraintBaseline_toBaselineOf="@+id/masennusRadio4"
         app:layout_constraintEnd_toStartOf="@+id/masennusRadio4" />
 
@@ -337,7 +337,7 @@
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
         android:checked="false"
-        android:text="2"
+        android:text="@string/two"
         app:layout_constraintBaseline_toBaselineOf="@+id/masennusRadio3"
         app:layout_constraintEnd_toStartOf="@+id/masennusRadio3"
         app:layout_constraintHorizontal_bias="1.0"
@@ -350,7 +350,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:checked="false"
-        android:text="1"
+        android:text="@string/one"
         app:layout_constraintBaseline_toBaselineOf="@+id/masennusRadio2"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -362,7 +362,7 @@
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
         android:checked="false"
-        android:text="5"
+        android:text="@string/five"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -400,7 +400,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:text="1"
+        android:text="@string/one"
         app:layout_constraintBaseline_toBaselineOf="@+id/kiihtunutRadio2"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -408,7 +408,7 @@
         android:id="@+id/kiihtunutRadio2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2"
+        android:text="@string/two"
         app:layout_constraintBaseline_toBaselineOf="@+id/kiihtunutRadio3"
         app:layout_constraintEnd_toStartOf="@+id/kiihtunutRadio3"
         app:layout_constraintHorizontal_bias="0.5"
@@ -418,7 +418,7 @@
         android:id="@+id/kiihtunutRadio3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="3"
+        android:text="@string/three"
         app:layout_constraintBaseline_toBaselineOf="@+id/kiihtunutRadio4"
         app:layout_constraintEnd_toStartOf="@+id/kiihtunutRadio4"
         app:layout_constraintHorizontal_bias="0.5"
@@ -428,7 +428,7 @@
         android:id="@+id/kiihtunutRadio4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="4"
+        android:text="@string/four"
         app:layout_constraintBaseline_toBaselineOf="@+id/kiihtunutRadio5"
         app:layout_constraintEnd_toStartOf="@+id/kiihtunutRadio5"
         app:layout_constraintHorizontal_bias="0.5"
@@ -438,7 +438,7 @@
         android:id="@+id/kiihtunutRadio5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="5"
+        android:text="@string/five"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -452,7 +452,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
-        android:text="5"
+        android:text="@string/five"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
