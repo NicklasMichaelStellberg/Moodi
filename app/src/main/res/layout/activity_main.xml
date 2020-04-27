@@ -101,62 +101,67 @@
         app:layout_constraintVertical_bias="0.62" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnBarChart"
         android:layout_width="54dp"
         android:layout_height="48dp"
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/iconfinder_095_chart_183222"
+        android:onClick="barChart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/btnCalendar"
         android:layout_width="54dp"
         android:layout_height="48dp"
         android:layout_marginStart="140dp"
         android:layout_marginLeft="140dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/iconfinder_calender_2944882"
+        android:onClick="calendar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/btnPieChart"
         android:layout_width="54dp"
         android:layout_height="48dp"
         android:layout_marginStart="216dp"
         android:layout_marginLeft="216dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/iconfinder_pie_chart_322488"
+        android:onClick="pieChart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button18"
+        android:id="@+id/btnInfo"
         android:layout_width="54dp"
         android:layout_height="48dp"
         android:layout_marginStart="280dp"
         android:layout_marginLeft="280dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/iconfinder_aiga_information_bg_134182"
+        android:onClick="info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button19"
+        android:id="@+id/btnAverageDay"
         android:layout_width="54dp"
         android:layout_height="48dp"
         android:layout_marginStart="340dp"
         android:layout_marginLeft="340dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/iconfinder_star_172558"
+        android:onClick="averageDay"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button15"
+        android:id="@+id/btnMain"
         android:layout_width="54dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"

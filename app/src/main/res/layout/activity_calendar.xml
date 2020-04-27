@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calendar">
+
+    <Button
+        android:id="@+id/btnBarChart"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/iconfinder_095_chart_183222"
+        android:onClick="barChart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCalendar"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/iconfinder_calender_2944882"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPieChart"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginLeft="216dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/iconfinder_pie_chart_322488"
+        android:onClick="pieChart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnInfo"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginLeft="280dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/iconfinder_aiga_information_bg_134182"
+        android:onClick="info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnAverageDay"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginLeft="340dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/iconfinder_star_172558"
+        android:onClick="averageDay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnMain"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/iconfinder_button_opacity_352903"
+        android:onClick="mainActivity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
