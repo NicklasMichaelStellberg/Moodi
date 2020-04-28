@@ -19,4 +19,8 @@
     <string name="keskiverto_kiihtynein_olo">Average agitation</string>
     <string name="keskiverto_arsyyntynein_olo">Average irritability</string>
     <string name="keskiverto_ahdistunein_olo">Average anxiety</string>
+    <string name="tiedot">Moodi mood tracker mobile app was developed by students of Metropolia.</string>
+    <string name="versio">Version 0.1</string>
+    <string name="vuosi">2020</string>
+    <string name="sovelluksen_tiedot">About the app</string>
 </resources>
