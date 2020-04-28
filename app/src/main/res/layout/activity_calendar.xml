@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Calendar">
 
+    <CalendarView
+        android:layout_width="406dp"
+        android:layout_height="348dp">
+
+    </CalendarView>
+
     <Button
         android:id="@+id/btnBarChart"
         android:layout_width="54dp"
