@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".AverageDay"></activity>
+        <activity android:name=".charts"/>
         <activity android:name=".Info" />
         <activity android:name=".PieChartActivity" />
         <activity android:name=".Calendar" />
