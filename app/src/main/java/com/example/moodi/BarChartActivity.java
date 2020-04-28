@@ -6,12 +6,34 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class BarChartActivity extends AppCompatActivity {
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
 
+import java.util.ArrayList;
+import java.util.List;
+
+public class BarChartActivity extends AppCompatActivity {
+    BarChart barChart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bar_chart);
+
+        barChart = findViewById(R.id.barChart);
+        List<BarEntry> entries = new ArrayList<>();
+        entries.add(new BarEntry(0,10f));
+        entries.add(new BarEntry(1,7.5f));
+        entries.add(new BarEntry(2,8.5f));
+        entries.add(new BarEntry(3,6f));
+
+        BarDataSet set = new BarDataSet(entries, "BarDataSet");
+        BarData data = new BarData(set);
+        data.setBarWidth(0.9f);
+        barChart.setData(data);
+        barChart.setFitBars(true);
+        barChart.invalidate();
 
     }
 
