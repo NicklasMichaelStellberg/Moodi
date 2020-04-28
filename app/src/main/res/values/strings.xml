@@ -13,4 +13,9 @@
     <string name="four">4</string>
     <string name="five">5</string>
     <string name="zero_hours">0h</string>
+    <string name="keskiverto_unen_maara">Keskiverto unen määrä</string>
+    <string name="keskiverto_masentuneisuus">Keskiverto masentuneisuus</string>
+    <string name="keskiverto_kiihtynein_olo">Keskiverto kiihtynein olo</string>
+    <string name="keskiverto_arsyyntynein_olo">Keskiverto ärsyyntynein olo</string>
+    <string name="keskiverto_ahdistunein_olo">Keskiverto ahdistunein olo</string>
 </resources>

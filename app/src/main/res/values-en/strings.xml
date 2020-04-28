@@ -14,4 +14,9 @@
     <string name="four">4</string>
     <string name="five">5</string>
     <string name="zero_hours">0h</string>
+    <string name="keskiverto_unen_maara">Average sleep</string>
+    <string name="keskiverto_masentuneisuus">Average depression</string>
+    <string name="keskiverto_kiihtynein_olo">Average agitation</string>
+    <string name="keskiverto_arsyyntynein_olo">Average irritability</string>
+    <string name="keskiverto_ahdistunein_olo">Average anxiety</string>
 </resources>

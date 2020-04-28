@@ -21,13 +21,13 @@
             android:id="@+id/kiihtyneisyysRadio1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1" />
+            android:text="@string/one" />
 
         <RadioButton
             android:id="@+id/kiihtyneisyysRadio2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2"
+            android:text="@string/two"
             tools:text="2" />
 
         <RadioButton
@@ -35,21 +35,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="false"
-            android:text="3"
+            android:text="@string/three"
             tools:text="3" />
 
         <RadioButton
             android:id="@+id/kiihtyneisyysRadio4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4" />
+            android:text="@string/four" />
 
         <RadioButton
             android:id="@+id/kiihtyneisyysRadio5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="false"
-            android:text="5"
+            android:text="@string/five"
             tools:text="5" />
     </RadioGroup>
 
@@ -270,33 +270,33 @@
             android:id="@+id/masisRadio1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1" />
+            android:text="@string/one" />
 
         <RadioButton
             android:id="@+id/masisRadio2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2"
+            android:text="@string/two"
             tools:text="2" />
 
         <RadioButton
             android:id="@+id/masisRadio3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3"
+            android:text="@string/three"
             tools:text="3" />
 
         <RadioButton
             android:id="@+id/masisRadio4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4" />
+            android:text="@string/four" />
 
         <RadioButton
             android:id="@+id/masisRadio5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="5"
+            android:text="@string/five"
             tools:text="5" />
     </RadioGroup>
 
@@ -316,32 +316,32 @@
             android:id="@+id/arsutusRadio1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1" />
+            android:text="@string/one" />
 
         <RadioButton
             android:id="@+id/arsutusRadio2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2"
+            android:text="@string/two"
             tools:text="2" />
 
         <RadioButton
             android:id="@+id/arsutusRadio3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3" />
+            android:text="@string/three" />
 
         <RadioButton
             android:id="@+id/arsutusRadio4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4" />
+            android:text="@string/four" />
 
         <RadioButton
             android:id="@+id/arsutusRadio5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="5"
+            android:text="@string/five"
             tools:text="5" />
     </RadioGroup>
 
@@ -360,33 +360,33 @@
             android:id="@+id/ahdistusRadio1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1" />
+            android:text="@string/one" />
 
         <RadioButton
             android:id="@+id/ahdistusRadio2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2"
+            android:text="@string/two"
             tools:text="2" />
 
         <RadioButton
             android:id="@+id/ahdistusRadio3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3"
+            android:text="@string/three"
             tools:text="3" />
 
         <RadioButton
             android:id="@+id/ahdistusRadio4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4" />
+            android:text="@string/four" />
 
         <RadioButton
             android:id="@+id/ahdistusRadio5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="5"
+            android:text="@string/five"
             tools:ignore="DuplicateIds"
             tools:text="5" />
     </RadioGroup>
