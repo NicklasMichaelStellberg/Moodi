@@ -33,20 +33,20 @@ public class Paivaus {
 
     }
 
-          public static Paivaus load(Calendar calendar, Context context) {//ladataan paivaus tiedosto
-            String tunniste = "" + calendar.get(Calendar.YEAR) + calendar.get(Calendar.MONTH) + calendar.get(Calendar.DAY_OF_MONTH);
-            //avataan tiedosto jonka nimi on tunniste
-            //lue tiedostosta tarvittava tieto päiväys luokalle
-            //return new paivaus
-            //etsitään directory tiedoston tallennukseen
+    public static Paivaus load(Calendar calendar, Context context) {//ladataan paivaus tiedosto
+        String tunniste = "" + calendar.get(Calendar.YEAR) + calendar.get(Calendar.MONTH) + calendar.get(Calendar.DAY_OF_MONTH);
+        //avataan tiedosto jonka nimi on tunniste
+        //lue tiedostosta tarvittava tieto päiväys luokalle
+        //return new paivaus
+        //etsitään directory tiedoston tallennukseen
 
-            File muisti = context.getFilesDir();
+        File muisti = context.getFilesDir();
 
-            //Luodaan tekstitiedosto
-            File file = new File(muisti, tunniste);
+        //Luodaan tekstitiedosto
+        File file = new File(muisti, tunniste);
 
-            //Luetaan tekstitiedostosta
-            StringBuilder text = new StringBuilder();
+        //Luetaan tekstitiedostosta
+        StringBuilder text = new StringBuilder();
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
