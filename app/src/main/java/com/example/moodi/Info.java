@@ -22,7 +22,7 @@ public class Info extends AppCompatActivity {
         startActivity(intent);
     }
     public void calendar(View view) {
-        Intent intent = new Intent(this, Calendar.class);
+        Intent intent = new Intent(this, CalendarActivity.class);
         startActivity(intent);
     }
     public void pieChart(View view) {
