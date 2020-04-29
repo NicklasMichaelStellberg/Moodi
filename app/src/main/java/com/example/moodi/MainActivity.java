@@ -2,68 +2,131 @@ package com.example.moodi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
+import android.widget.DatePicker;
+
+import java.util.Calendar;
+
+
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
+    private Paivaus tamapaiva;
     private TextView sleepText;
-    private ProgressBar sleepBar;
     private SeekBar sleepSeek;
+    TextView aikatv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        String date_n = new SimpleDateFormat("dd.MM.yyyy", //selvitetään nykyinen päivämäärä ja asetetaan se tekstikenttään.
+                Locale.getDefault()).format(new Date());
+        aikatv = findViewById(R.id.aika);
+        aikatv.setText(date_n);
+        findViewById(R.id.datepicker).setOnClickListener(new View.OnClickListener() {//listener imagebuttonille joka avaa kalenterivalinnan
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog(); //kutsutaan päivämäärävalitsin metodia
+            }
 
-        sleepText= (TextView) findViewById(R.id.sleepTv);
-        sleepSeek= (SeekBar) findViewById(R.id.sleepSeek);
+
+        });
+        //seekerbar
+        sleepText = (TextView) findViewById(R.id.sleepTv); //määritetään seeker bar ja laitetaan sen maksimiarvoksi 24(h)
+        sleepSeek = (SeekBar) findViewById(R.id.sleepSeek);
         sleepSeek.setMax(24);
-
         sleepSeek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int unet, boolean fromUser) {
-                sleepText.setText("" +unet +"h");
+                sleepText.setText("" + unet + "h");//asetetaan seekbarin arvo näkymään tekstikentässä
 
             }
 
-            @Override
+            @Override//seek bar metodeja, ei välttämättä tarvita
             public void onStartTrackingTouch(SeekBar seekBar) {
 
             }
 
-            @Override
+            @Override//seek bar metodeja, ei välttämättä tarvita
             public void onStopTrackingTouch(SeekBar seekBar) {
 
             }
         });
     }
-    /** Called when the user taps the button */
+
+    private void showDatePickerDialog() {
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                this,
+                this,
+                Calendar.getInstance().get(Calendar.YEAR),
+                Calendar.getInstance().get(Calendar.MONTH),
+                Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
+        );
+        datePickerDialog.show();
+    }
+
+    /**
+     * Called when the user taps the button
+     */
     public void barChart(View view) {
         Intent intent = new Intent(this, BarChartActivity.class);
         startActivity(intent);
     }
+
     public void calendar(View view) {
         Intent intent = new Intent(this, Calendar.class);
         startActivity(intent);
     }
+
     public void pieChart(View view) {
         Intent intent = new Intent(this, PieChartActivity.class);
         startActivity(intent);
     }
+
     public void info(View view) {
         Intent intent = new Intent(this, Info.class);
         startActivity(intent);
     }
+
     public void averageDay(View view) {
         Intent intent = new Intent(this, AverageDay.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        String date = +dayOfMonth + "." + month + "." + year;
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month, dayOfMonth);
+        this.tamapaiva = Paivaus.load(calendar, this.getApplicationContext());
+        //tamapaiva objektista ladataan arvot radiobuttoneihin ja slideriin
+
+        aikatv.setText(date);
+
+
+    }
+
+    private void saveData() {
+        //hae kaikkien radiogrouppien arvot, tallenna tamapaiva muuttujaan
+    }
+
+    private void loadData() {
+
+
+    }
 }
+
