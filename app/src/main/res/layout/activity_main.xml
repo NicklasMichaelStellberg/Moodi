@@ -345,7 +345,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/iconfinder_095_chart_183222"
+        android:background="@drawable/analytics_bars"
         android:onClick="barChart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -357,7 +357,7 @@
         android:layout_marginStart="140dp"
         android:layout_marginLeft="140dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/iconfinder_calender_2944882"
+        android:background="@drawable/calendar_3"
         android:onClick="calendar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -369,7 +369,7 @@
         android:layout_marginStart="216dp"
         android:layout_marginLeft="216dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/iconfinder_pie_chart_322488"
+        android:background="@drawable/analytics_pie_2"
         android:onClick="pieChart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -381,7 +381,7 @@
         android:layout_marginStart="280dp"
         android:layout_marginLeft="280dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/iconfinder_aiga_information_bg_134182"
+        android:background="@drawable/question_help_square"
         android:onClick="info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -393,7 +393,7 @@
         android:layout_marginStart="340dp"
         android:layout_marginLeft="340dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/iconfinder_star_172558"
+        android:background="@drawable/rating_star_square"
         android:onClick="averageDay"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -405,7 +405,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/iconfinder_button_opacity_352903"
+        android:background="@drawable/house_chimney"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
