@@ -30,10 +30,10 @@ public class PieChartActivity extends AppCompatActivity {
 
         pieChart.setBackgroundColor(20991);
 
-        entries.add(new PieEntry(10, "Testi label 1"));
-        entries.add(new PieEntry(20, "Testi Label 2"));
-        entries.add(new PieEntry(40, "Testi label 3"));
-        entries.add(new PieEntry(30, "Testi label 4"));
+        entries.add(new PieEntry(10, "Depression"));
+        entries.add(new PieEntry(20, "Agitation"));
+        entries.add(new PieEntry(40, "Irritation"));
+        entries.add(new PieEntry(30, "Anxiety"));
 
         PieDataSet set = new PieDataSet(entries, "Piirastesti");
         set.setColors(ColorTemplate.MATERIAL_COLORS);
