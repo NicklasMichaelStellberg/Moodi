@@ -34,7 +34,7 @@ public class PieChartActivity extends AppCompatActivity {
         entries.add(new PieEntry(30, "Testi label 4"));
 
         PieDataSet set = new PieDataSet(entries, "Piirastesti");
-        set.setColors(ColorTemplate.VORDIPLOM_COLORS);
+        set.setColors(ColorTemplate.MATERIAL_COLORS);
         PieData data = new PieData(set);
         pieChart.setData(data);
         pieChart.invalidate();;
