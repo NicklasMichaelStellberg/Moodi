@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.ImageButton;
+import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -28,11 +30,32 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
     private TextView sleepText;
     private SeekBar sleepSeek;
     TextView aikatv;
+    int masennus = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        RadioGroup rg = (RadioGroup) findViewById(R.id.masisRadio);
+
+        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch(checkedId){
+                    case R.id.masisRadio1:
+                        masennus = 1;
+                        Log.i("result", "" + masennus);
+                        break;
+                    case R.id.masisRadio2:
+                        // do operations specific to this selection
+                        break;
+                    case R.id.masisRadio3:
+                        // do operations specific to this selection
+                        break;
+                }
+            }
+        });
         String date_n = new SimpleDateFormat("dd.MM.yyyy", //selvitetään nykyinen päivämäärä ja asetetaan se tekstikenttään.
                 Locale.getDefault()).format(new Date());
         aikatv = findViewById(R.id.aika);
