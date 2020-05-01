@@ -28,6 +28,8 @@ public class PieChartActivity extends AppCompatActivity {
         pieChart = findViewById(R.id.pieChart);
         List<PieEntry> entries = new ArrayList<>();
 
+        pieChart.setBackgroundColor(20991);
+
         entries.add(new PieEntry(10, "Testi label 1"));
         entries.add(new PieEntry(20, "Testi Label 2"));
         entries.add(new PieEntry(40, "Testi label 3"));
@@ -37,6 +39,7 @@ public class PieChartActivity extends AppCompatActivity {
         set.setColors(ColorTemplate.MATERIAL_COLORS);
         PieData data = new PieData(set);
         pieChart.setData(data);
+        pieChart.setBackgroundColor(0x0051FF);
         pieChart.invalidate();;
 
 
