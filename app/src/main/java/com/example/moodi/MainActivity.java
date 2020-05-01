@@ -31,16 +31,18 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
     private SeekBar sleepSeek;
     TextView aikatv;
     int depression = 0;
-
+    int agitation = 0;
+    int irritation = 0;
+    int anxiety = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        RadioGroup rg = (RadioGroup) findViewById(R.id.masisRadio);
+        RadioGroup masis = (RadioGroup) findViewById(R.id.masisRadio);
 
-        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        masis.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch(checkedId){
@@ -63,6 +65,93 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                     case R.id.masisRadio5:
                         depression = 5;
                         Log.i("result", "" + depression);
+                        break;
+                }
+            }
+        });
+        RadioGroup kiihtyneisyys = (RadioGroup) findViewById(R.id.kiihtyneisyysRadio);
+
+        kiihtyneisyys.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch(checkedId){
+                    case R.id.kiihtyneisyysRadio1:
+                        agitation = 1;
+                        Log.i("result", "" + agitation);
+                        break;
+                    case R.id.kiihtyneisyysRadio2:
+                        agitation = 2;
+                        Log.i("result", "" + agitation);
+                        break;
+                    case R.id.kiihtyneisyysRadio3:
+                        agitation = 3;
+                        Log.i("result", "" + agitation);
+                        break;
+                    case R.id.kiihtyneisyysRadio4:
+                        agitation = 4;
+                        Log.i("result", "" + agitation);
+                        break;
+                    case R.id.kiihtyneisyysRadio5:
+                        agitation = 5;
+                        Log.i("result", "" + agitation);
+                        break;
+                }
+            }
+        });
+        RadioGroup arsutus = (RadioGroup) findViewById(R.id.arsutusRadio);
+
+        arsutus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch(checkedId){
+                    case R.id.arsutusRadio1:
+                        irritation = 1;
+                        Log.i("result", "" + irritation);
+                        break;
+                    case R.id.arsutusRadio2:
+                        irritation = 2;
+                        Log.i("result", "" + irritation);
+                        break;
+                    case R.id.arsutusRadio3:
+                        irritation = 3;
+                        Log.i("result", "" + irritation);
+                        break;
+                    case R.id.arsutusRadio4:
+                        irritation = 4;
+                        Log.i("result", "" + irritation);
+                        break;
+                    case R.id.arsutusRadio5:
+                        irritation = 5;
+                        Log.i("result", "" + irritation);
+                        break;
+                }
+            }
+        });
+        RadioGroup ahdistus = (RadioGroup) findViewById(R.id.ahdistusRadio);
+
+        ahdistus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch(checkedId){
+                    case R.id.ahdistusRadio1:
+                        anxiety = 1;
+                        Log.i("result", "" + anxiety);
+                        break;
+                    case R.id.ahdistusRadio2:
+                        anxiety = 2;
+                        Log.i("result", "" + anxiety);
+                        break;
+                    case R.id.ahdistusRadio3:
+                        anxiety = 3;
+                        Log.i("result", "" + anxiety);
+                        break;
+                    case R.id.ahdistusRadio4:
+                        anxiety = 4;
+                        Log.i("result", "" + anxiety);
+                        break;
+                    case R.id.ahdistusRadio5:
+                        anxiety = 5;
+                        Log.i("result", "" + anxiety);
                         break;
                 }
             }
