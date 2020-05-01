@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
     private TextView sleepText;
     private SeekBar sleepSeek;
     TextView aikatv;
-    int masennus = 0;
+    int depression = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,14 +45,24 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch(checkedId){
                     case R.id.masisRadio1:
-                        masennus = 1;
-                        Log.i("result", "" + masennus);
+                        depression = 1;
+                        Log.i("result", "" + depression);
                         break;
                     case R.id.masisRadio2:
-                        // do operations specific to this selection
+                        depression = 2;
+                        Log.i("result", "" + depression);
                         break;
                     case R.id.masisRadio3:
-                        // do operations specific to this selection
+                        depression = 3;
+                        Log.i("result", "" + depression);
+                        break;
+                    case R.id.masisRadio4:
+                        depression= 4;
+                        Log.i("result", "" + depression);
+                        break;
+                    case R.id.masisRadio5:
+                        depression = 5;
+                        Log.i("result", "" + depression);
                         break;
                 }
             }
