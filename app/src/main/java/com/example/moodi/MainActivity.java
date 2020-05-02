@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         month = calendar.get(Calendar.MONTH);
         dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
         tamapaiva=Paivaus.load(year,month,dayOfMonth, getApplicationContext());
-        updateradiobuttons();
+        updateradiobuttons();//tähän metodi jotta saadaan muistista vanhat radiobuttoneiden arvot
         selectDate.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -234,6 +234,7 @@ public class MainActivity extends AppCompatActivity {
         sleepSeek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int unet, boolean fromUser) {
+                tamapaiva.setSleep(unet);
                 sleepText.setText("" + unet + "h");//asetetaan seekbarin arvo näkymään tekstikentässä
 
             }
