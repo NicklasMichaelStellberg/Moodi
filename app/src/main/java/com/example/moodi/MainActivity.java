@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     int month;
     int dayOfMonth;
     Calendar calendar;
+    TextView muistiinpanot;
 
     protected void updateradiobuttons(){
 
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 Locale.getDefault()).format(new Date());
         aikatv = findViewById(R.id.aika);
         aikatv.setText(date_n);
+        muistiinpanot=findViewById(R.id.notes);
         selectDate = findViewById(R.id.datepicker);
         date = findViewById(R.id.aika);
         calendar = Calendar.getInstance();
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                              date.setText(newday + "." + (newmonth + 1) + "." + newyear);
                              tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                              tamapaiva=Paivaus.load(newyear,newmonth,newday, getApplicationContext());
-                                updateradiobuttons();
+                                updateradiobuttons();//kutsuu metodia jota toistaiseksi ei ole olemassaa, tarkoitus asettaa radiobuttonit aiemmin kirjattuihin arvoihin
                              year=newyear;
                              month=newmonth;
                              dayOfMonth=newday;
@@ -251,17 +253,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    /*private void showDatePickerDialog() {
-        DatePickerDialog datePickerDialog = new DatePickerDialog(
-                this,
-                this,
-                Calendar.getInstance().get(Calendar.YEAR),
-                Calendar.getInstance().get(Calendar.MONTH),
-                Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
-        );
-        datePickerDialog.show();
-    }*/
-
     /**
      * Called when the user taps the button
      */
@@ -289,19 +280,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AverageDay.class);
         startActivity(intent);
     }
-
-    /*@Override
-    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-        String date = +dayOfMonth + "." + month + "." + year;
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(year, month, dayOfMonth);
-        this.tamapaiva = Paivaus.load(calendar, this.getApplicationContext());
-        //tamapaiva objektista ladataan arvot radiobuttoneihin ja slideriin
-
-        aikatv.setText(date);
-
-
-    }*/
 
     private void saveData() {
         //hae kaikkien radiogrouppien arvot, tallenna tamapaiva muuttujaan

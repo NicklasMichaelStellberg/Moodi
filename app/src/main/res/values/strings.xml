@@ -23,4 +23,7 @@
     <string name="vuosi">2020</string>
     <string name="sovelluksen_tiedot">Tietoa sovelluksesta</string>
     <string name="aika">20.4.2020</string>
+    <string name="Nappi">OK</string>
+
+
 </resources>

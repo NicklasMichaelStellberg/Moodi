@@ -24,4 +24,6 @@
     <string name="vuosi">2020</string>
     <string name="sovelluksen_tiedot">About the app</string>
     <string name="aika">time</string>
+    <string name="Nappi">OK</string>
+
 </resources>
