@@ -4,7 +4,7 @@
     <string name="unen_maara">Last night sleep</string>
     <string name="paivan_pahin_masentuneisuus">Day\'s worst depression</string>
     <string name="paivan_kiihtynein_olo">Day\'s worst agitation</string>
-    <string name="paivan_arsyyntynein_olo">Day¨s worst irritation</string>
+    <string name="paivan_arsyyntynein_olo">Day\'s worst irritation</string>
     <string name="paivan_ahditunein_olo">Day\'s worst anxiety</string>
     <string name="otetut_laakkeet">Taken medicine</string>
     <string name="muistiinpanot">Notes</string>
@@ -23,4 +23,5 @@
     <string name="versio">Version 0.1</string>
     <string name="vuosi">2020</string>
     <string name="sovelluksen_tiedot">About the app</string>
+    <string name="aika">time</string>
 </resources>

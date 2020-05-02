@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B1F6FF"
     tools:context=".MainActivity">
 
     <TextView
@@ -42,6 +43,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/paivan_kiihtynein_olo"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -69,6 +73,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/paivan_arsyyntynein_olo"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -80,18 +87,20 @@
 
     <SeekBar
         android:id="@+id/sleepSeek"
-        android:layout_width="374dp"
-        android:layout_height="13dp"
+        android:layout_width="253dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="112dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <RadioGroup
         android:id="@+id/kiihtyneisyysRadio"
@@ -147,6 +156,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/paivan_ahditunein_olo"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -216,7 +228,8 @@
             android:id="@+id/ahdistusRadio1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/one" />
+            android:text="@string/one"
+            android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/ahdistusRadio2"
@@ -299,13 +312,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/paivan_pahin_masentuneisuus"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.203" />
+        app:layout_constraintVertical_bias="0.202" />
 
     <TextView
         android:id="@+id/textView5"
@@ -388,6 +405,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/house_chimney"
+        android:textColor="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

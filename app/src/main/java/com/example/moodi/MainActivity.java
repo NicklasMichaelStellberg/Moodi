@@ -1,32 +1,26 @@
 package com.example.moodi;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ProgressBar;
+import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-import android.widget.DatePicker;
 
-import java.util.Calendar;
-
-
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
-
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity {
     private Paivaus tamapaiva;
     private TextView sleepText;
     private SeekBar sleepSeek;
@@ -43,6 +37,9 @@ public class MainActivity extends AppCompatActivity  {
     int dayOfMonth;
     Calendar calendar;
 
+    protected void updateradiobuttons(){
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,50 +50,67 @@ public class MainActivity extends AppCompatActivity  {
         aikatv.setText(date_n);
         selectDate = findViewById(R.id.datepicker);
         date = findViewById(R.id.aika);
-
+        calendar = Calendar.getInstance();
+        year = calendar.get(Calendar.YEAR);
+        month = calendar.get(Calendar.MONTH);
+        dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+        tamapaiva=Paivaus.load(year,month,dayOfMonth, getApplicationContext());
+        updateradiobuttons();
         selectDate.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                calendar = Calendar.getInstance();
-                year = calendar.get(Calendar.YEAR);
-                month = calendar.get(Calendar.MONTH);
-                dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+
                 datePickerDialog = new DatePickerDialog(MainActivity.this,
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
-                            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                                date.setText(day + "." + (month + 1) + "." + year);
+                            public void onDateSet(DatePicker datePicker, int newyear, int newmonth, int newday) {
+                                datePickerDialog.getDatePicker().setMaxDate(new Date().getTime());
+                             date.setText(newday + "." + (newmonth + 1) + "." + newyear);
+                             tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
+                             tamapaiva=Paivaus.load(newyear,newmonth,newday, getApplicationContext());
+                                updateradiobuttons();
+                             year=newyear;
+                             month=newmonth;
+                             dayOfMonth=newday;
                             }
                         }, year, month, dayOfMonth);
+                datePickerDialog.getDatePicker().setMaxDate(new Date().getTime());
                 datePickerDialog.show();
             }
         });
 
+
+
         RadioGroup masis = (RadioGroup) findViewById(R.id.masisRadio);
 
-        masis.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
-        {
+        masis.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch(checkedId){
+
+                switch (checkedId) {
                     case R.id.masisRadio1:
                         depression = 1;
+                        tamapaiva.setDepression(1);
                         Log.i("result", "" + depression);
                         break;
                     case R.id.masisRadio2:
                         depression = 2;
+                        tamapaiva.setDepression(2);
                         Log.i("result", "" + depression);
                         break;
                     case R.id.masisRadio3:
                         depression = 3;
+                        tamapaiva.setDepression(3);
                         Log.i("result", "" + depression);
                         break;
                     case R.id.masisRadio4:
-                        depression= 4;
+                        depression = 4;
+                        tamapaiva.setDepression(4);
                         Log.i("result", "" + depression);
                         break;
                     case R.id.masisRadio5:
                         depression = 5;
+                        tamapaiva.setDepression(5);
                         Log.i("result", "" + depression);
                         break;
                 }
@@ -104,28 +118,32 @@ public class MainActivity extends AppCompatActivity  {
         });
         RadioGroup kiihtyneisyys = (RadioGroup) findViewById(R.id.kiihtyneisyysRadio);
 
-        kiihtyneisyys.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
-        {
+        kiihtyneisyys.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch(checkedId){
+                switch (checkedId) {
                     case R.id.kiihtyneisyysRadio1:
                         agitation = 1;
+                        tamapaiva.setAgitation(1);
                         Log.i("result", "" + agitation);
                         break;
                     case R.id.kiihtyneisyysRadio2:
                         agitation = 2;
+                        tamapaiva.setAgitation(2);
                         Log.i("result", "" + agitation);
                         break;
                     case R.id.kiihtyneisyysRadio3:
                         agitation = 3;
+                        tamapaiva.setAgitation(3);
                         Log.i("result", "" + agitation);
                         break;
                     case R.id.kiihtyneisyysRadio4:
                         agitation = 4;
+                        tamapaiva.setAgitation(4);
                         Log.i("result", "" + agitation);
                         break;
                     case R.id.kiihtyneisyysRadio5:
                         agitation = 5;
+                        tamapaiva.setAgitation(5);
                         Log.i("result", "" + agitation);
                         break;
                 }
@@ -133,28 +151,32 @@ public class MainActivity extends AppCompatActivity  {
         });
         RadioGroup arsutus = (RadioGroup) findViewById(R.id.arsutusRadio);
 
-        arsutus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
-        {
+        arsutus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch(checkedId){
+                switch (checkedId) {
                     case R.id.arsutusRadio1:
                         irritation = 1;
+                        tamapaiva.setIrritation(1);
                         Log.i("result", "" + irritation);
                         break;
                     case R.id.arsutusRadio2:
                         irritation = 2;
+                        tamapaiva.setIrritation(2);
                         Log.i("result", "" + irritation);
                         break;
                     case R.id.arsutusRadio3:
                         irritation = 3;
+                        tamapaiva.setIrritation(3);
                         Log.i("result", "" + irritation);
                         break;
                     case R.id.arsutusRadio4:
                         irritation = 4;
+                        tamapaiva.setIrritation(4);
                         Log.i("result", "" + irritation);
                         break;
                     case R.id.arsutusRadio5:
                         irritation = 5;
+                        tamapaiva.setIrritation(5);
                         Log.i("result", "" + irritation);
                         break;
                 }
@@ -162,28 +184,32 @@ public class MainActivity extends AppCompatActivity  {
         });
         RadioGroup ahdistus = (RadioGroup) findViewById(R.id.ahdistusRadio);
 
-        ahdistus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
-        {
+        ahdistus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch(checkedId){
+                switch (checkedId) {
                     case R.id.ahdistusRadio1:
                         anxiety = 1;
+                        tamapaiva.setAnxiety(1);
                         Log.i("result", "" + anxiety);
                         break;
                     case R.id.ahdistusRadio2:
                         anxiety = 2;
+                        tamapaiva.setAnxiety(2);
                         Log.i("result", "" + anxiety);
                         break;
                     case R.id.ahdistusRadio3:
                         anxiety = 3;
+                        tamapaiva.setAnxiety(3);
                         Log.i("result", "" + anxiety);
                         break;
                     case R.id.ahdistusRadio4:
                         anxiety = 4;
+                        tamapaiva.setAnxiety(4);
                         Log.i("result", "" + anxiety);
                         break;
                     case R.id.ahdistusRadio5:
                         anxiety = 5;
+                        tamapaiva.setAnxiety(5);
                         Log.i("result", "" + anxiety);
                         break;
                 }
@@ -284,5 +310,6 @@ public class MainActivity extends AppCompatActivity  {
 
 
     }
+
 }
 

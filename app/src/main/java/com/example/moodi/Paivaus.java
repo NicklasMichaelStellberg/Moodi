@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.Calendar;
 
 //luokan olio vastaa aina yhden päivän kirjattuja tietoja
-public class Paivaus {
+public class Paivaus extends MainActivity {
 
 
     private int sleep = 0;
@@ -23,7 +23,7 @@ public class Paivaus {
     private int anxiety = 0;
 
 
-    public Paivaus(int sleep, int depression, int agitation, int irritation, int anxiety) {
+    private Paivaus(int sleep, int depression, int agitation, int irritation, int anxiety) {
 
         this.sleep = sleep;
         this.depression = depression;
@@ -33,8 +33,8 @@ public class Paivaus {
 
     }
 
-    public static Paivaus load(Calendar calendar, Context context) {//ladataan paivaus tiedosto
-        String tunniste = "" + calendar.get(Calendar.YEAR) + calendar.get(Calendar.MONTH) + calendar.get(Calendar.DAY_OF_MONTH);
+    public static Paivaus load(int year,int month, int dayOfMonth, Context context) {//ladataan paivaus tiedosto
+        String tunniste = "" + year+"-"+month+"-"+dayOfMonth;
         //avataan tiedosto jonka nimi on tunniste
         //lue tiedostosta tarvittava tieto päiväys luokalle
         //return new paivaus
@@ -64,8 +64,8 @@ public class Paivaus {
         return new Paivaus(0, 0, 0, 0, 0);//palauta nämä arvot
     }
 
-    public void save(Calendar calendar, Context context) {// tallennetaan paivaustiedosto
-        String tunniste = "" + calendar.get(Calendar.YEAR) + calendar.get(Calendar.MONTH) + calendar.get(Calendar.DAY_OF_MONTH);
+    public void save(int year,int month, int dayOfMonth, Context context) {// tallennetaan paivaustiedosto
+        String tunniste = "" + year+"-"+month+"-"+dayOfMonth;
         File muisti = context.getFilesDir();
         File file = new File(muisti, tunniste);
         try {
