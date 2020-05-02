@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.ImageButton;
@@ -25,7 +26,7 @@ import java.util.Calendar;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
-public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
+public class MainActivity extends AppCompatActivity  {
     private Paivaus tamapaiva;
     private TextView sleepText;
     private SeekBar sleepSeek;
@@ -34,11 +35,43 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
     int agitation = 0;
     int irritation = 0;
     int anxiety = 0;
+    ImageButton selectDate;
+    TextView date;
+    DatePickerDialog datePickerDialog;
+    int year;
+    int month;
+    int dayOfMonth;
+    Calendar calendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        String date_n = new SimpleDateFormat("dd.MM.yyyy", //selvitetään nykyinen päivämäärä ja asetetaan se tekstikenttään.
+                Locale.getDefault()).format(new Date());
+        aikatv = findViewById(R.id.aika);
+        aikatv.setText(date_n);
+        selectDate = findViewById(R.id.datepicker);
+        date = findViewById(R.id.aika);
+
+        selectDate.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                calendar = Calendar.getInstance();
+                year = calendar.get(Calendar.YEAR);
+                month = calendar.get(Calendar.MONTH);
+                dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+                datePickerDialog = new DatePickerDialog(MainActivity.this,
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                                date.setText(day + "." + (month + 1) + "." + year);
+                            }
+                        }, year, month, dayOfMonth);
+                datePickerDialog.show();
+            }
+        });
 
         RadioGroup masis = (RadioGroup) findViewById(R.id.masisRadio);
 
@@ -156,7 +189,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                 }
             }
         });
-        String date_n = new SimpleDateFormat("dd.MM.yyyy", //selvitetään nykyinen päivämäärä ja asetetaan se tekstikenttään.
+        /*String date_n = new SimpleDateFormat("dd.MM.yyyy", //selvitetään nykyinen päivämäärä ja asetetaan se tekstikenttään.
                 Locale.getDefault()).format(new Date());
         aikatv = findViewById(R.id.aika);
         aikatv.setText(date_n);
@@ -167,7 +200,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
             }
 
 
-        });
+        });*/
         //seekerbar
         sleepText = (TextView) findViewById(R.id.sleepTv); //määritetään seeker bar ja laitetaan sen maksimiarvoksi 24(h)
         sleepSeek = (SeekBar) findViewById(R.id.sleepSeek);
@@ -191,7 +224,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         });
     }
 
-    private void showDatePickerDialog() {
+    /*private void showDatePickerDialog() {
         DatePickerDialog datePickerDialog = new DatePickerDialog(
                 this,
                 this,
@@ -200,7 +233,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                 Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
         );
         datePickerDialog.show();
-    }
+    }*/
 
     /**
      * Called when the user taps the button
@@ -230,7 +263,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         startActivity(intent);
     }
 
-    @Override
+    /*@Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
         String date = +dayOfMonth + "." + month + "." + year;
         Calendar calendar = Calendar.getInstance();
@@ -241,7 +274,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         aikatv.setText(date);
 
 
-    }
+    }*/
 
     private void saveData() {
         //hae kaikkien radiogrouppien arvot, tallenna tamapaiva muuttujaan
