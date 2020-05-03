@@ -331,80 +331,80 @@
         android:id="@+id/btnBarChart"
         android:layout_width="54dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/light_analytics_bars"
         android:onClick="barChart"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnMain" />
+        app:layout_constraintEnd_toStartOf="@+id/btnCalendar" />
 
     <Button
         android:id="@+id/btnCalendar"
         android:layout_width="54dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginRight="85dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/light_calendar_3"
         android:onClick="calendar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnBarChart" />
+        app:layout_constraintEnd_toEndOf="@+id/notes" />
 
     <Button
         android:id="@+id/btnPieChart"
         android:layout_width="54dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/light_analytics_pie2"
         android:onClick="pieChart"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnInfo" />
+        app:layout_constraintStart_toEndOf="@+id/btnCalendar" />
 
     <Button
         android:id="@+id/btnInfo"
         android:layout_width="54dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/light_question_help_square"
         android:onClick="info"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnAverageDay" />
+        app:layout_constraintStart_toEndOf="@+id/btnPieChart" />
 
     <Button
         android:id="@+id/btnAverageDay"
         android:layout_width="54dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/mask_star"
         android:onClick="averageDay"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/btnInfo" />
 
     <Button
         android:id="@+id/btnMain"
         android:layout_width="54dp"
         android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/house_chimney"
         android:textColor="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/btnBarChart" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="391dp" />
+        app:layout_constraintGuide_end="382dp" />
 
     <ImageButton
         android:id="@+id/datepicker"
@@ -422,31 +422,29 @@
 
     <EditText
         android:id="@+id/notes"
-        android:layout_width="213dp"
-        android:layout_height="142dp"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="#E4F8DDB3"
         android:ems="10"
         android:gravity="top"
         android:hint="@string/muistiinpanot"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ahdistusRadio"
-        app:layout_constraintVertical_bias="0.0" />
+        android:inputType="textLongMessage|textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/ahdistusRadio"
+        app:layout_constraintTop_toBottomOf="@+id/ahdistusRadio" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="97dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="47dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="70dp"
         android:text="@string/Nappi"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notes" />
+        app:layout_constraintStart_toEndOf="@+id/notes"
+        app:layout_constraintTop_toBottomOf="@+id/ahdistusRadio" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
