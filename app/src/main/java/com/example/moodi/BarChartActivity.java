@@ -13,7 +13,6 @@ import com.github.mikephil.charting.data.BarEntry;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +24,7 @@ public class BarChartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bar_chart);
 
         barChart = findViewById(R.id.barChart);
+
         List<BarEntry> entries = new ArrayList<>();
         entries.add(new BarEntry(0,10f));
         entries.add(new BarEntry(1,7.5f));
@@ -39,7 +39,7 @@ public class BarChartActivity extends AppCompatActivity {
         barChart.invalidate();
 
     }
-
+    // Alanapit eri activityihin
     public void mainActivity(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

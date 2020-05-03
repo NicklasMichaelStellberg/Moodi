@@ -331,8 +331,8 @@
         android:id="@+id/btnBarChart"
         android:layout_width="54dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/light_analytics_bars"
         android:onClick="barChart"
@@ -343,32 +343,32 @@
         android:id="@+id/btnCalendar"
         android:layout_width="54dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="85dp"
-        android:layout_marginRight="85dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/light_calendar_3"
         android:onClick="calendar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/notes" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline" />
 
     <Button
         android:id="@+id/btnPieChart"
         android:layout_width="54dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/light_analytics_pie2"
         android:onClick="pieChart"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnCalendar" />
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
 
     <Button
         android:id="@+id/btnInfo"
         android:layout_width="54dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/light_question_help_square"
         android:onClick="info"
@@ -379,8 +379,8 @@
         android:id="@+id/btnAverageDay"
         android:layout_width="54dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/mask_star"
         android:onClick="averageDay"
@@ -391,8 +391,8 @@
         android:id="@+id/btnMain"
         android:layout_width="54dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/house_chimney"
         android:textColor="#2196F3"
@@ -404,7 +404,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="382dp" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <ImageButton
         android:id="@+id/datepicker"
@@ -428,6 +428,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="#E4F8DDB3"
+        android:capitalize="sentences"
+        android:ellipsize="start"
         android:ems="10"
         android:gravity="top"
         android:hint="@string/muistiinpanot"
