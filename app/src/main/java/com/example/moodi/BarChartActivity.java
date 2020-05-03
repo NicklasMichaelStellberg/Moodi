@@ -33,7 +33,7 @@ public class BarChartActivity extends AppCompatActivity {
 
         BarDataSet set = new BarDataSet(entries, "BarDataSet");
         BarData data = new BarData(set);
-        data.setBarWidth(0.9f);
+        data.setBarWidth(1f);
         barChart.setData(data);
         barChart.setFitBars(true);
         barChart.invalidate();

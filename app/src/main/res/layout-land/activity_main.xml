@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B1F6FF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:text="@string/unen_maara"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/sleepSeek"
+        app:layout_constraintEnd_toStartOf="@+id/sleepTv"
+        app:layout_constraintTop_toBottomOf="@+id/aika" />
+
+    <TextView
+        android:id="@+id/sleepTv"
+        android:layout_width="37dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:text="@string/zero_hours"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/aika" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:text="@string/paivan_kiihtynein_olo"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/masisRadio" />
+
+    <TextView
+        android:id="@+id/aika"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/aika" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/paivan_arsyyntynein_olo"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/sleepSeek"
+        android:layout_width="253dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:padding="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/sleepTv" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/paivan_ahditunein_olo"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/arsutusRadio" />
+
+    <RadioGroup
+        android:id="@+id/ahdistusRadio"
+        android:layout_width="200dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <RadioButton
+            android:id="@+id/ahdistusRadio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/one"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/ahdistusRadio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/two"
+            tools:text="2" />
+
+        <RadioButton
+            android:id="@+id/ahdistusRadio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/three"
+            tools:text="3" />
+
+        <RadioButton
+            android:id="@+id/ahdistusRadio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/four" />
+
+        <RadioButton
+            android:id="@+id/ahdistusRadio5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/five"
+            tools:ignore="DuplicateIds"
+            tools:text="5" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:text="@string/paivan_pahin_masentuneisuus"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/sleepSeek" />
+
+    <Button
+        android:id="@+id/btnBarChart"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/light_analytics_bars"
+        android:onClick="barChart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnCalendar" />
+
+    <Button
+        android:id="@+id/btnCalendar"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/light_calendar_3"
+        android:onClick="calendar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/btnPieChart"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/light_analytics_pie2"
+        android:onClick="pieChart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/btnInfo"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/light_question_help_square"
+        android:onClick="info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnPieChart" />
+
+    <Button
+        android:id="@+id/btnAverageDay"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/mask_star"
+        android:onClick="averageDay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnInfo" />
+
+    <Button
+        android:id="@+id/btnMain"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/house_chimney"
+        android:textColor="#2196F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnBarChart" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageButton
+        android:id="@+id/datepicker"
+        android:layout_width="34dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/aika"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_day" />
+
+    <EditText
+        android:id="@+id/tvNotes"
+        android:layout_width="200dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:background="#E4F8DDB3"
+        android:capitalize="sentences"
+        android:ellipsize="start"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="@string/muistiinpanot"
+        android:inputType="textLongMessage|textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/ahdistusRadio" />
+
+    <Button
+        android:id="@+id/btOk"
+        android:layout_width="47dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
+        android:text="@string/Nappi"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tvNotes" />
+
+    <RadioGroup
+        android:id="@+id/masisRadio"
+        android:layout_width="215dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/masisRadio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/one" />
+
+        <RadioButton
+            android:id="@+id/masisRadio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/two"
+            tools:text="2" />
+
+        <RadioButton
+            android:id="@+id/masisRadio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/three"
+            tools:text="3" />
+
+        <RadioButton
+            android:id="@+id/masisRadio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/four" />
+
+        <RadioButton
+            android:id="@+id/masisRadio5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/five"
+            tools:text="5" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/kiihtyneisyysRadio"
+        style="@style/Radiobuttonstyle"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="DuplicateIds">
+
+        <RadioButton
+            android:id="@+id/kiihtyneisyysRadio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/one" />
+
+        <RadioButton
+            android:id="@+id/kiihtyneisyysRadio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/two"
+            tools:layout_editor_absoluteX="546dp"
+            tools:layout_editor_absoluteY="118dp"
+            tools:text="2" />
+
+        <RadioButton
+            android:id="@+id/kiihtyneisyysRadio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/three"
+            tools:layout_editor_absoluteX="586dp"
+            tools:layout_editor_absoluteY="118dp"
+            tools:text="3" />
+
+        <RadioButton
+            android:id="@+id/kiihtyneisyysRadio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/four"
+            tools:layout_editor_absoluteX="626dp"
+            tools:layout_editor_absoluteY="118dp" />
+
+        <RadioButton
+            android:id="@+id/kiihtyneisyysRadio5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/five"
+            tools:layout_editor_absoluteX="666dp"
+            tools:layout_editor_absoluteY="118dp"
+            tools:text="5" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/arsutusRadio"
+        android:layout_width="191dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/arsutusRadio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/one" />
+
+        <RadioButton
+            android:id="@+id/arsutusRadio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/two"
+            tools:layout_editor_absoluteX="536dp"
+            tools:layout_editor_absoluteY="246dp"
+            tools:text="2" />
+
+        <RadioButton
+            android:id="@+id/arsutusRadio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/three"
+            tools:layout_editor_absoluteX="576dp"
+            tools:layout_editor_absoluteY="246dp" />
+
+        <RadioButton
+            android:id="@+id/arsutusRadio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/four"
+            tools:layout_editor_absoluteX="616dp"
+            tools:layout_editor_absoluteY="246dp" />
+
+        <RadioButton
+            android:id="@+id/arsutusRadio5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/five"
+            tools:layout_editor_absoluteX="656dp"
+            tools:layout_editor_absoluteY="246dp"
+            tools:text="5" />
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,16 +18,19 @@ public class Paivaus extends MainActivity {
     private int agitation = 0;
     private int irritation = 0;
     private int anxiety = 0;
+    private String Muistiinpanot;
 
     public String getMuistiinpanot() {
         return Muistiinpanot;
     }
 
+
+
     public void setMuistiinpanot(String muistiinpanot) {
         Muistiinpanot = muistiinpanot;
     }
 
-    private String Muistiinpanot;
+
 
 
     private Paivaus(int sleep, int depression, int agitation, int irritation, int anxiety, String muistiinpanot) {
@@ -87,9 +90,8 @@ public class Paivaus extends MainActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
+
 
     // metodi unenmäärän saamiseen
     public int getSleep() {
