@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B1F6FF"
     tools:context=".PieChartActivity">
 
     <com.github.mikephil.charting.charts.PieChart
@@ -30,7 +31,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/analytics_bars"
+        android:background="@drawable/light_analytics_bars"
         android:onClick="barChart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -42,7 +43,7 @@
         android:layout_marginStart="140dp"
         android:layout_marginLeft="140dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/calendar_3"
+        android:background="@drawable/light_calendar_3"
         android:onClick="calendar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -65,7 +66,7 @@
         android:layout_marginStart="280dp"
         android:layout_marginLeft="280dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/question_help_square"
+        android:background="@drawable/light_question_help_square"
         android:onClick="info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -77,7 +78,7 @@
         android:layout_marginStart="340dp"
         android:layout_marginLeft="340dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/rating_star_square"
+        android:background="@drawable/mask_star"
         android:onClick="averageDay"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -89,7 +90,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/house_chimney"
+        android:background="@drawable/light_house_chimney"
         android:onClick="mainActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
