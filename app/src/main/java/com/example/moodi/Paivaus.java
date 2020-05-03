@@ -18,9 +18,19 @@ public class Paivaus extends MainActivity {
     private int agitation = 0;
     private int irritation = 0;
     private int anxiety = 0;
+    private String Muistiinpanot;
+
+    public String getMuistiinpanot() {
+        return Muistiinpanot;
+    }
 
 
-    private String Muistiinpanot=null;
+
+    public void setMuistiinpanot(String muistiinpanot) {
+        Muistiinpanot = muistiinpanot;
+    }
+
+
 
 
     private Paivaus(int sleep, int depression, int agitation, int irritation, int anxiety, String muistiinpanot) {
@@ -48,7 +58,7 @@ public class Paivaus extends MainActivity {
         //Luetaan tekstitiedostosta
         StringBuilder text = new StringBuilder();
 
-        String Muistiinpanot = "";
+        String muistiinpanot = null;
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
             int sleep = Integer.parseInt(br.readLine());
@@ -58,11 +68,11 @@ public class Paivaus extends MainActivity {
             int anxiety = Integer.parseInt(br.readLine());
 
             br.close();
-            return new Paivaus(sleep, depression, agitation, irritation, anxiety, Muistiinpanot);
+            return new Paivaus(sleep, depression, agitation, irritation, anxiety, muistiinpanot);
         } catch (IOException e) { //handlaa sen  jos tiedostoa ei ole olemassa tai muuta siihen liittyvää virhettä
             //lisää jonkinlainen toiminto joka diilaa errorien kanssa
         }
-        return new Paivaus(0, 0, 0, 0, 0, Muistiinpanot);//palauta nämä arvot
+        return new Paivaus(0, 0, 0, 0, 0, muistiinpanot);//palauta nämä arvot
     }
 
     public void save(int year,int month, int dayOfMonth, Context context) {// tallennetaan paivaustiedosto
@@ -76,14 +86,12 @@ public class Paivaus extends MainActivity {
             br.write(this.agitation + "\n");
             br.write(this.irritation + "\n");
             br.write(this.anxiety + "\n");
-            br.write(this.muistiinpanot + "\n");
             br.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
+
 
     // metodi unenmäärän saamiseen
     public int getSleep() {
@@ -134,13 +142,4 @@ public class Paivaus extends MainActivity {
     public void setAnxiety(int anxiety) {
         this.anxiety = anxiety;
     }
-
-    public String getMuistiinpanot() {
-        return Muistiinpanot;
-    }
-
-    public void setMuistiinpanot(String Muistiinpanot) {
-        this.Muistiinpanot = Muistiinpanot;
-    }
-
 }

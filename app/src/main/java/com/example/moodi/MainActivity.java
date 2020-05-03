@@ -1,12 +1,13 @@
 package com.example.moodi;
 
 import android.app.DatePickerDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
@@ -14,6 +15,12 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.w3c.dom.Text;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -36,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     int month;
     int dayOfMonth;
     Calendar calendar;
-    TextView muistiinpanot;
+    EditText muistiinpanot;
 
     protected void updateradiobuttons(){
 
@@ -49,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 Locale.getDefault()).format(new Date());
         aikatv = findViewById(R.id.aika);
         aikatv.setText(date_n);
-        muistiinpanot=findViewById(R.id.notes);
+        muistiinpanot=findViewById(R.id.tvNotes);
         selectDate = findViewById(R.id.datepicker);
         date = findViewById(R.id.aika);
         calendar = Calendar.getInstance();
@@ -251,7 +258,35 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        // Muistiinpanojen tallennus napista tekstitiedostoon.
+        Button buttonSave = (Button)findViewById(R.id.btOk);
+        buttonSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    muistiinpanot = findViewById(R.id.tvNotes);
+                    String tunniste = "" + year + "-" + month + "-" + dayOfMonth + "_notes";
+                    String muistiinpanoText = muistiinpanot.getText().toString();
+                    File file = new File("data/data/com.example.moodi/files/" + tunniste+".txt"); // Luo tiedoston päivämäärä_notes.txt nimellä
+                    if (!file.exists()) {
+
+                        file.createNewFile();
+                    }
+                    FileWriter fileWriter = new FileWriter(file, true);
+                    BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+                    bufferedWriter.write(muistiinpanoText);  // Kirjoittaa tekstitiedostoon muistiinpanokenttään syötetyn tekstin.
+                    bufferedWriter.close();
+
+            }catch (IOException e) {
+                e.printStackTrace();}
+
+
+            }
+        });
+
     }
+
+
 
     /**
      * Called when the user taps the button
@@ -262,7 +297,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calendar(View view) {
-        Intent intent = new Intent(this, SleepList.class);
+        Intent intent = new Intent(this, Calendar.class);
         startActivity(intent);
     }
 
