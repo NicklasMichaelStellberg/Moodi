@@ -39,11 +39,13 @@ public class BarChartActivity extends AppCompatActivity {
 
         barChart = findViewById(R.id.barChart);
 
+        ArrayList<Paivaus> paivaukset= Paivaus.loadall(getApplicationContext());
         List<BarEntry> entries = new ArrayList<>();
-        entries.add(new BarEntry(0,10f));
-        entries.add(new BarEntry(1,7.5f));
-        entries.add(new BarEntry(2,8.5f));
-        entries.add(new BarEntry(3,6f));
+        int i= 1;
+        for (Paivaus p:paivaukset
+        ) {entries.add(new BarEntry(i,p.getSleep()));
+            i++;
+        }
 
         BarDataSet set = new BarDataSet(entries, "BarDataSet");
         BarData data = new BarData(set);
@@ -51,6 +53,14 @@ public class BarChartActivity extends AppCompatActivity {
         barChart.setData(data);
         barChart.setFitBars(true);
         barChart.invalidate();
+
+
+       /* int laskuri= 0;//keskarin lasku
+        for (Paivaus p:paivaukset
+        ) {
+            laskuri+=p.getSleep();
+        }
+        double keskari=(double)laskuri/(double)paivaukset.size();*/
 
     }
     /**
@@ -77,3 +87,5 @@ public class BarChartActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
+
+

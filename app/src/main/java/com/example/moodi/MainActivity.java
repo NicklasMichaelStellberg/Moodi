@@ -292,9 +292,10 @@ public class MainActivity extends AppCompatActivity {
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
+
                     muistiinpanot = findViewById(R.id.tvNotes);
-                    String tunniste = "" + year + "-" + month + "-" + dayOfMonth + "_notes";
+                    tamapaiva.setMuistiinpanot(muistiinpanot.getText().toString());
+                    /*String tunniste = "" + year + "-" + month + "-" + dayOfMonth + "_notes";
                     String muistiinpanoText = muistiinpanot.getText().toString();
                     File file = new File("data/data/com.example.moodi/files/" + tunniste+".txt"); // Luo tiedoston päivämäärä_notes.txt nimellä
                     if (!file.exists()) {
@@ -309,7 +310,7 @@ public class MainActivity extends AppCompatActivity {
             }catch (IOException e) {
                 e.printStackTrace();}
 
-
+*/
             }
         });
 
