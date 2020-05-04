@@ -16,6 +16,12 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Luokka sisältää palkkikaavion
+ * @author
+ * @version 0.1 5/2020
+ */
+
 public class BarChartActivity extends AppCompatActivity {
     BarChart barChart;
     @Override
@@ -39,7 +45,9 @@ public class BarChartActivity extends AppCompatActivity {
         barChart.invalidate();
 
     }
-    // Alanapit eri activityihin
+    /**
+     * Alanapit eri activityihin
+     */
     public void mainActivity(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

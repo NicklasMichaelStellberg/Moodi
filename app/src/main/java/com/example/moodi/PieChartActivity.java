@@ -16,6 +16,11 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Luokka sisältää piiraskaavion
+ * @author
+ * @version 0.1 5/2020
+ */
 public class PieChartActivity extends AppCompatActivity {
     PieChart pieChart;
     int value;
@@ -50,6 +55,9 @@ public class PieChartActivity extends AppCompatActivity {
         this.value = value;
         this.label = label;
     }
+    /**
+     * Alanapit eri activityihin
+     */
     public void mainActivity(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
