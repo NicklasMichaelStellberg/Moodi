@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import com.google.gson.Gson;
 
 //luokan olio vastaa aina yhden päivän kirjattuja tietoja
 public class Paivaus extends MainActivity {
