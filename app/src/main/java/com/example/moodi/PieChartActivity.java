@@ -65,8 +65,9 @@ public class PieChartActivity extends AppCompatActivity {
         this.value = value;
         this.label = label;
     }
-
-    //alapalkin napit activitystä toiseen siirtymiseen
+    /**
+     * Alanapit eri activityihin
+     */
     public void mainActivity(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

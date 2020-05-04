@@ -26,6 +26,11 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+/**
+ * Luokka sisältää
+ * @author
+ * @version 0.1 5/2020
+ */
 
 public class MainActivity extends AppCompatActivity {
     private Paivaus tamapaiva;
@@ -289,7 +294,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Called when the user taps the button
+     * Alanapit eri activityihin
      */
     public void barChart(View view) {
         Intent intent = new Intent(this, BarChartActivity.class);

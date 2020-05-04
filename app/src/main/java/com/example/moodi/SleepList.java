@@ -12,6 +12,11 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Luokka sisältää
+ * @author
+ * @version 0.1 5/2020
+ */
 public class SleepList extends AppCompatActivity {
     /**
      * Luokka näyttää listana päivämäärät, mistä käyttäjä voi napauttaa päivämäärää mikä näyttää
