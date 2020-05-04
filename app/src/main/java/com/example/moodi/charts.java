@@ -25,11 +25,16 @@ public class charts extends AppCompatActivity {
         setContentView(R.layout.activity_charts);
 
         barChart = findViewById(R.id.barChart);
+        ArrayList<Paivaus> paivaukset= Paivaus.loadall(getApplicationContext());
         List<BarEntry> entries = new ArrayList<>();
-        entries.add(new BarEntry(0,10f));
-        entries.add(new BarEntry(1,7.5f));
-        entries.add(new BarEntry(2,8.5f));
-        entries.add(new BarEntry(3,6f));
+        int i= 1;
+        for (Paivaus p:paivaukset
+             ) {entries.add(new BarEntry(i,p.getSleep()));
+                i++;
+        }
+
+
+
 
         BarDataSet set = new BarDataSet(entries, "BarDataSet");
         BarData data = new BarData(set);
