@@ -27,6 +27,7 @@ import java.util.Date;
 import java.util.Locale;
 import com.google.gson.Gson;
 
+
 /**
  * Luokka sisältää
  * @author Oskari Toivonen
