@@ -6,6 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+/**
+ * Luokan tarkoitus on näyttää käyttäjän syöttämine arvojen keskiarvo. Tämä luokka ei ehtinyt valmistua.
+ * @author
+ * @version 0.1 5/2020
+ */
+
 public class AverageDay extends AppCompatActivity {
 
     @Override

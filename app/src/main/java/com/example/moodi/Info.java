@@ -7,6 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 
 public class Info extends AppCompatActivity {
+    /**
+     * Luokka näyttää infoa sovelluksesta.
+     * @author
+     * @version 0.1 5/2020
+     * @param savedInstanceState
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -13,6 +13,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SleepList extends AppCompatActivity {
+    /**
+     * Luokka näyttää listana päivämäärät, mistä käyttäjä voi napauttaa päivämäärää mikä näyttää
+     * arvot mitkä käyttäjä oli sinä päivänä syöttänyt. Tämä luokka ei ehtinyt valmistua.
+     * @author Jani Turpeinen
+     * @version 0.1 5/2020
+     * @param savedInstanceState
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

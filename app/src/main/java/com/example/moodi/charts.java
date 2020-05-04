@@ -11,6 +11,11 @@ import com.github.mikephil.charting.data.BarEntry;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Ensimmäinen prototyyppi kaavioiden luontiin. Käyttämätön luokka.
+ * @author Jani Turpeinen
+ * @version 0.1 5/2020
+ */
 
 public class charts extends AppCompatActivity {
     BarChart barChart;
