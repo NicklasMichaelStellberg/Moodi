@@ -28,11 +28,26 @@ import java.util.Locale;
 
 /**
  * Luokka sisältää
- * @author
+ * @author Oskari Toivonen
  * @version 0.1 5/2020
  */
 
 public class MainActivity extends AppCompatActivity {
+    /**
+     * tamapaiva muuttujan avulla seurataan tämänhetkistä päivämäärää
+     * TextView Seekbar alustaa textviewin seekbarin arvoja varten
+     * TextView aikatv alustaa textviewin aika-arvoa varten
+     * Imagebutton avaa datepicker dialogin
+     * Textview date alustaa textviewin päivämäärän näyttöä varten
+     * DatePickerDialog alustaa datepicker kalenterivalikon
+     * @param int year alustaa vuoden
+     * @param int month alustaa kuukauden
+     * @param int dayOfMonth alustaa päivän
+     * calendar alustaa kalenterin
+     * EditText muistiinpanot alustaa tekstikentän kirjoittamista varten
+     * @author Oskari Toivonen
+     * @version 0.1 5/2020
+     */
     private Paivaus tamapaiva;
     private TextView sleepText;
     private SeekBar sleepSeek;
@@ -53,6 +68,12 @@ public class MainActivity extends AppCompatActivity {
     protected void updateradiobuttons(){
 
     }
+    /**
+     * date_n asetetaan tekstikenttään tämäpäivä
+     *
+     * @author Oskari Toivonen
+     * @version 0.1 5/2020
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         RadioGroup masis = (RadioGroup) findViewById(R.id.masisRadio);
+        masis.check(R.id.masisRadio1);
 
         masis.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
