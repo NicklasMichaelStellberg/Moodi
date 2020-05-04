@@ -16,7 +16,22 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Luokka sisältää piiraskaavion. Piiraskaaviossa tällä hetkellä on vain staattista dataa, käyttäjän syötteestä emme saanut dataa
+ * piiraskaavioon ajan puuttessa.
+ * @author Jani Turpeinen
+ * @version 0.1 5/2020
+ */
+
 public class PieChartActivity extends AppCompatActivity {
+
+    /**
+     * Luotu  Philipp Jahodan MpAndroidChart kirjastolla.
+     * @param  Piechartilla luodaan piiraskaavio
+     * @param  String label määrittää ja int value on keskeneräiseen metodiin millä oltaisiin saatu piiraskaavioon käyttäjän dataa.
+     *          Rivit 42-56 luodaan piiraskaavio. Tällä hetkellä piiraskaaviossa on staattiset arvot.
+     * @param set.setColors määrittää olemassa olevista templateista piiraskaavion lohkojen värit.
+     */
     PieChart pieChart;
     int value;
     String label;
@@ -50,6 +65,9 @@ public class PieChartActivity extends AppCompatActivity {
         this.value = value;
         this.label = label;
     }
+    /**
+     * Alanapit eri activityihin
+     */
     public void mainActivity(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

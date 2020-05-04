@@ -10,7 +10,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import com.google.gson.Gson;
 
-//luokan olio vastaa aina yhden päivän kirjattuja tietoja
+/**
+ * luokan olio vastaa aina yhden päivän kirjattuja tietoja
+ * @author
+ * @version 0.1 5/2020
+ */
 public class Paivaus extends MainActivity {
 
 

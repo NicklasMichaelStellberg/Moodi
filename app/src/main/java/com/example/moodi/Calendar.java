@@ -6,6 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+/**
+ * Luokka näyttää kalenterin. Keskeneräisen ominaisuuden takia turha luokka.
+ * @author
+ * @version 0.1 5/2020
+ */
+
 public class Calendar extends AppCompatActivity {
 
     @Override
@@ -13,6 +19,9 @@ public class Calendar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
     }
+    /**
+     * Alanapit eri activityihin
+     */
     public void mainActivity(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
