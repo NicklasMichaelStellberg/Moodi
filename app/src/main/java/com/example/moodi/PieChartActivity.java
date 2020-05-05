@@ -44,14 +44,45 @@ public class PieChartActivity extends AppCompatActivity {
         pieChart = findViewById(R.id.pieChart);
         ArrayList<Paivaus> paivaukset= Paivaus.loadall(getApplicationContext());
 
+                int laskuriD= 0;//keskarin lasku
+        for (Paivaus p:paivaukset
+        ) {
+            laskuriD+=p.getDepression();
+        }
+        double keskariMasis=(double)laskuriD/(double)paivaukset.size();
+
+        int laskuriI= 0;//keskarin lasku
+        for (Paivaus p:paivaukset
+        ) {
+            laskuriI+=p.getIrritation();
+        }
+        double keskariIrritation=(double)laskuriI/(double)paivaukset.size();
+
+        int laskuriAG= 0;//keskarin lasku
+        for (Paivaus p:paivaukset
+        ) {
+            laskuriAG+=p.getDepression();
+        }
+        double keskariAG=(double)laskuriAG/(double)paivaukset.size();
+
+        int laskuriAN= 0;//keskarin lasku
+        for (Paivaus p:paivaukset
+        ) {
+            laskuriAN+=p.getDepression();
+        }
+        double keskariAN=(double)laskuriAN/(double)paivaukset.size();
+
+
+
+
         pieChart.setBackgroundColor(20991);
         List<PieEntry> entries = new ArrayList<>();
         int i= 1;
         for (Paivaus p:paivaukset //arvojen lataus.
-        ) {entries.add(new PieEntry(i,p.getDepression()));
-            entries.add(new PieEntry(i,p.getAgitation()));
-                entries.add(new PieEntry(i,p.getIrritation()));
-                        entries.add(new PieEntry(i, p.getAnxiety()));
+        ) {entries.add(new PieEntry(i,keskariMasis));
+            entries.add(new PieEntry(i,keskariIrritation));
+                entries.add(new PieEntry(i,keskariAG));
+                        entries.add(new PieEntry(i, keskariAN));
             i++;
         } //Piechartin styleä pitäisi vielä muuttaa, täyttyy turhalla dummy-arvoilla.
 
