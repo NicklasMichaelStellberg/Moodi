@@ -43,7 +43,20 @@ public class BarChartActivity extends AppCompatActivity {
         final Button agitationbutton = findViewById(R.id.agitationButton);
         final Button anxietybutton = findViewById(R.id.anxietyButton);
 
+        ArrayList<Paivaus> paivaukset = Paivaus.loadall(getApplicationContext());
+        List<BarEntry> entries = new ArrayList<>();
+        int i = 1;
+        for (Paivaus p : paivaukset) {
+            entries.add(new BarEntry(i, p.getDepression()));
+            i++;
+        }
 
+        BarDataSet set = new BarDataSet(entries, "BarDataSet");
+        BarData data = new BarData(set);
+        data.setBarWidth(1f);
+        barChart.setData(data);
+        barChart.setFitBars(true);
+        barChart.invalidate();
 
         depisbutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
