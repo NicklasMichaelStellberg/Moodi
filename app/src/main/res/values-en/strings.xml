@@ -25,5 +25,10 @@
     <string name="sovelluksen_tiedot">About the app</string>
     <string name="aika">time</string>
     <string name="Nappi">OK</string>
+    <string name="uni">Sleep</string>
+    <string name="masentuneisuus">Depression</string>
+    <string name="kiihtyvyys">Agitation</string>
+    <string name="arsytys">Irritation</string>
+    <string name="ahdistus">Anxiety</string>
 
 </resources>
