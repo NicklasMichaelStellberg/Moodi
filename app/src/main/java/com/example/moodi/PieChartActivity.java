@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Luokka sisältää piiraskaavion. Piiraskaaviossa tällä hetkellä on vain staattista dataa, käyttäjän syötteestä emme saanut dataa
+ * Luokka sisältää piiraskaavion.
  * piiraskaavioon ajan puuttessa.
  * @author Jani Turpeinen
  * @version 0.1 5/2020

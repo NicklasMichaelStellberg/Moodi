@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 /**
- * Luokka näyttää kalenterin. Keskeneräisen ominaisuuden takia turha luokka.
+ * Aktiviteetti näyttää kalenterin. Keskeneräisen ominaisuuden takia turha luokka.
  * @author Nicklas Stellberg
  * @version 0.1 5/2020
  */

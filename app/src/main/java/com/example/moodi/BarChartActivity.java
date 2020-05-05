@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Luokka sisältää paalukaavion, josta voi seurata unen määrää. Yksi paalu kuvastaa yhtä päivää. Tämä ominaisuus ei valitettavasti valmistunut ajallaan.
+ * Luokka sisältää paalukaavion, josta voi seurata unen määrää. Yksi paalu kuvastaa yhtä päivää.
  * @author Jani Turpeinen
  * @version 0.1 5/2020
  */

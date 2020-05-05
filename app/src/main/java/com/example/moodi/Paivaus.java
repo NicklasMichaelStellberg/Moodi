@@ -28,7 +28,14 @@ import org.json.JSONObject;
  * @version 0.1 5/2020
  */
 public class Paivaus extends MainActivity {
-
+    /**
+     * @param int sleep unen määrä, joka asetetaan mainactivyssä
+     * @param int depression masentuneisuuden määrä, joka asetetaan mainactivyssä
+     * @param int agitation kiihtyvyyden määrä, joka asetetaan mainactivyssä
+     * @param int irritation ärsyyntyneisyyden määrä, joka asetetaan mainactivyssä
+     * @param int anxiety ahdistuksen määrä, joka asetetaan mainactivyssä
+     * @param String muistiinpanot, joka asetetaan mainactivyssä
+     */
 
     private int sleep = 0;
     private int depression = 0;
@@ -41,15 +48,12 @@ public class Paivaus extends MainActivity {
         return muistiinpanot;
     }
 
-
-
     public void setMuistiinpanot(String muistiinpanot) {
         this.muistiinpanot = muistiinpanot;
     }
-
-
-
-
+    /**
+     * Luokan konstruktori
+     */
     private Paivaus(int sleep, int depression, int agitation, int irritation, int anxiety, String muistiinpanot) {
 
         this.sleep = sleep;
@@ -61,22 +65,15 @@ public class Paivaus extends MainActivity {
     }
 
     private static Paivaus loadfromfile(File file){
+        /**
+         * Lataa tiedostosta jokaisen muuttujan arvot ja tiedostosta lataaisessa on varmuustoimenpiteitä
+         */
         StringBuilder text = new StringBuilder();
 
         String muistiinpanot = "";
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
-           /* int sleep = Integer.parseInt(br.readLine());
-            int depression = Integer.parseInt(br.readLine());
-            int agitation = Integer.parseInt(br.readLine());
-            int irritation = Integer.parseInt(br.readLine());
-            int anxiety = Integer.parseInt(br.readLine());
-            String line=br.readLine();
-            while (line!=null){
-                muistiinpanot += line +"\n";
-                line= br.readLine();
-            }*/
            JsonParser jsonParser=new JsonParser();
            JsonElement object= jsonParser.parse(br);
            JsonObject j=object.getAsJsonObject();
@@ -97,7 +94,9 @@ public class Paivaus extends MainActivity {
         return new Paivaus(0, 0, 0, 0, 0, muistiinpanot);//palauta nämä arvot
     }
 
-
+    /**
+     * Looppi käy hakemiston kaikki tiedostot läpi ja palauttaa niistä kaikki arraylistin, jotta niitä voidaan käyttää muissa aktiviteeteissa
+     */
     public static ArrayList<Paivaus> loadall(Context context){
      ArrayList<Paivaus> paivaukset= new ArrayList<Paivaus>();
      File muisti = context.getFilesDir();
@@ -106,8 +105,9 @@ public class Paivaus extends MainActivity {
         }
         return paivaukset;
     }
-
-
+    /**
+     * Päiväkohtainen lataus
+     */
     public static Paivaus load(int year,int month, int dayOfMonth, Context context) {//ladataan paivaus tiedosto
 
         String tunniste = "" + year+"-"+month+"-"+dayOfMonth;
@@ -124,7 +124,9 @@ public class Paivaus extends MainActivity {
         //Luetaan tekstitiedostosta
         return loadfromfile(file);
     }
-
+    /**
+     * Päiväkohtainen tallennus
+     */
     public void save(int year,int month, int dayOfMonth, Context context) {// tallennetaan paivaustiedosto
         String tunniste = "" + year+"-"+month+"-"+dayOfMonth;
         File muisti = context.getFilesDir();
@@ -151,53 +153,63 @@ public class Paivaus extends MainActivity {
         }
     }
 
-
-    // metodi unenmäärän saamiseen
+    /**
+     * metodi unenmäärän saamiseen
+     */
     public int getSleep() {
         return sleep;
     }
-
-    // metodi masennus arvon saamiseen
+    /**
+     * metodi masennus arvon saamiseen
+     */
     public int getDepression() {
         return depression;
     }
-
-    // metodi kiihtyneisyys arvon saamiseen
+    /**
+     * metodi kiihtyneisyys arvon saamiseen
+     */
     public int getAgitation() {
         return agitation;
     }
-
-    // metodi ärsyynnyksen arvon saamiseen
+    /**
+     * metodi ärsyynnyksen arvon saamiseen
+     */
     public int getIrritation() {
         return irritation;
     }
-
-    //metodi ahdistus arvon saamiseen
+    /**
+     * metodi ahdistus arvon saamiseen
+     */
     public int getAnxiety() {
         return anxiety;
     }
-
-    //metodi unenmäärän arvon asettamiseen
+    /**
+     * metodi unenmäärän arvon asettamiseen
+     */
     public void setSleep(int sleep) {
         this.sleep = sleep;
     }
-
-    //metodi masennus arvon asettamiseen
+    /**
+     * metodi masennus arvon asettamiseen
+     */
     public void setDepression(int depression) {
         this.depression = depression;
     }
-
-    //metodi kiihtyneisyys arvon asettamiseen
+    /**
+     * metodi kiihtyneisyys arvon asettamiseen
+     */
     public void setAgitation(int agitation) {
         this.agitation = agitation;
     }
-
-    //metodi ärsyyntyneisyys arvon asettamiseen
+    /**
+     * metodi ärsyyntyneisyys arvon asettamiseen
+     */
     public void setIrritation(int irritation) {
         this.irritation = irritation;
     }
-
-    //metodi ahdistuneisuus arvon asettamiseen
+    /**
+     * metodi ahdistuneisuus arvon asettamiseen
+     */
     public void setAnxiety(int anxiety) {
         this.anxiety = anxiety;
     }
