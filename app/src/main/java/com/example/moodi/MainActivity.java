@@ -137,26 +137,31 @@ public class MainActivity extends AppCompatActivity {
                         depression = 1;
                         tamapaiva.setDepression(1);
                         Log.i("result", "" + depression);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                     case R.id.masisRadio2:
                         depression = 2;
                         tamapaiva.setDepression(2);
                         Log.i("result", "" + depression);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                     case R.id.masisRadio3:
                         depression = 3;
                         tamapaiva.setDepression(3);
                         Log.i("result", "" + depression);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                     case R.id.masisRadio4:
                         depression = 4;
                         tamapaiva.setDepression(4);
                         Log.i("result", "" + depression);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                     case R.id.masisRadio5:
                         depression = 5;
                         tamapaiva.setDepression(5);
                         Log.i("result", "" + depression);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                 }
             }
@@ -173,26 +178,31 @@ public class MainActivity extends AppCompatActivity {
                         agitation = 1;
                         tamapaiva.setAgitation(1);
                         Log.i("result", "" + agitation);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                     case R.id.kiihtyneisyysRadio2:
                         agitation = 2;
                         tamapaiva.setAgitation(2);
                         Log.i("result", "" + agitation);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                     case R.id.kiihtyneisyysRadio3:
                         agitation = 3;
                         tamapaiva.setAgitation(3);
                         Log.i("result", "" + agitation);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                     case R.id.kiihtyneisyysRadio4:
                         agitation = 4;
                         tamapaiva.setAgitation(4);
                         Log.i("result", "" + agitation);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                     case R.id.kiihtyneisyysRadio5:
                         agitation = 5;
                         tamapaiva.setAgitation(5);
                         Log.i("result", "" + agitation);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                 }
             }
@@ -209,26 +219,31 @@ public class MainActivity extends AppCompatActivity {
                         irritation = 1;
                         tamapaiva.setIrritation(1);
                         Log.i("result", "" + irritation);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                     case R.id.arsutusRadio2:
                         irritation = 2;
                         tamapaiva.setIrritation(2);
                         Log.i("result", "" + irritation);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                     case R.id.arsutusRadio3:
                         irritation = 3;
                         tamapaiva.setIrritation(3);
                         Log.i("result", "" + irritation);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                     case R.id.arsutusRadio4:
                         irritation = 4;
                         tamapaiva.setIrritation(4);
                         Log.i("result", "" + irritation);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                     case R.id.arsutusRadio5:
                         irritation = 5;
                         tamapaiva.setIrritation(5);
                         Log.i("result", "" + irritation);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                 }
             }
@@ -245,26 +260,31 @@ public class MainActivity extends AppCompatActivity {
                         anxiety = 1;
                         tamapaiva.setAnxiety(1);
                         Log.i("result", "" + anxiety);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                     case R.id.ahdistusRadio2:
                         anxiety = 2;
                         tamapaiva.setAnxiety(2);
                         Log.i("result", "" + anxiety);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                     case R.id.ahdistusRadio3:
                         anxiety = 3;
                         tamapaiva.setAnxiety(3);
                         Log.i("result", "" + anxiety);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                     case R.id.ahdistusRadio4:
                         anxiety = 4;
                         tamapaiva.setAnxiety(4);
                         Log.i("result", "" + anxiety);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                     case R.id.ahdistusRadio5:
                         anxiety = 5;
                         tamapaiva.setAnxiety(5);
                         Log.i("result", "" + anxiety);
+                        tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                         break;
                 }
             }
@@ -281,6 +301,7 @@ public class MainActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int unet, boolean fromUser) {
                 tamapaiva.setSleep(unet);
                 sleepText.setText("" + unet + "h");//asetetaan seekbarin arvo näkymään tekstikentässä
+                tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
 
             }
 
