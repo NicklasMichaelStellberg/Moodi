@@ -9,8 +9,8 @@
 
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/barChart"
-        android:layout_width="379dp"
-        android:layout_height="509dp"
+        android:layout_width="365dp"
+        android:layout_height="474dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="32dp"
@@ -86,5 +86,83 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/depisnappi"
+        android:layout_width="57dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="88dp"
+        android:text="Depression"
+        app:layout_constraintBottom_toTopOf="@+id/btnMain"
+        app:layout_constraintEnd_toStartOf="@+id/sleepButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barChart"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/irritationButton"
+        android:layout_width="57dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="88dp"
+        android:text="Irritation"
+        app:layout_constraintBottom_toTopOf="@+id/btnBarChart"
+        app:layout_constraintEnd_toStartOf="@+id/agitationButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sleepButton"
+        app:layout_constraintTop_toBottomOf="@+id/barChart"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/agitationButton"
+        android:layout_width="57dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="88dp"
+        android:text="Agitation"
+        app:layout_constraintBottom_toTopOf="@+id/btnPieChart"
+        app:layout_constraintEnd_toStartOf="@+id/anxietyButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/irritationButton"
+        app:layout_constraintTop_toBottomOf="@+id/barChart"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/anxietyButton"
+        android:layout_width="57dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="88dp"
+        android:text="Anxiety"
+        app:layout_constraintBottom_toTopOf="@+id/btnInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/agitationButton"
+        app:layout_constraintTop_toBottomOf="@+id/barChart"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/sleepButton"
+        android:layout_width="57dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="88dp"
+        android:text="Sleep"
+        app:layout_constraintBottom_toTopOf="@+id/btnBarChart"
+        app:layout_constraintEnd_toStartOf="@+id/irritationButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/depisnappi"
+        app:layout_constraintTop_toBottomOf="@+id/barChart"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
