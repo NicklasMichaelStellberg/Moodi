@@ -32,7 +32,7 @@ public class AverageDay extends AppCompatActivity {
         /**
          * Pyöristää luvun kahden desimaalin tarkkuuteenn
          */
-        DecimalFormat df = new DecimalFormat("#.##");
+        //DecimalFormat df = new DecimalFormat("#.##");
         /**
          * Laskee unen keskiarvon
          */
@@ -47,7 +47,8 @@ public class AverageDay extends AppCompatActivity {
             unilaskuri+=p.getSleep();
         }
         double unikeskari=(double)unilaskuri/(double)paivaukset.size();
-        unikeskari = Double.valueOf(df.format(unikeskari));
+        unikeskari = ((double)((int)(unikeskari *100.0)))/100.0;
+        //unikeskari = Double.valueOf(df.format(unikeskari));
         TextView uniTv = (TextView) findViewById(R.id.sleepTv);
         uniTv.setText(""+unikeskari);
 
@@ -65,7 +66,8 @@ public class AverageDay extends AppCompatActivity {
             masislaskuri+=p.getDepression();
         }
         double masiskeskari=(double)masislaskuri/(double)paivaukset.size();
-        masiskeskari = Double.valueOf(df.format(masiskeskari));
+        masiskeskari = ((double)((int)(masiskeskari *100.0)))/100.0;
+        //masiskeskari = Double.valueOf(df.format(masiskeskari));
         TextView depressionTv = (TextView) findViewById(R.id.depressionTv);
         depressionTv.setText(""+masiskeskari);
 
@@ -83,7 +85,8 @@ public class AverageDay extends AppCompatActivity {
             kiihtyneisyyslaskuri+=p.getAgitation();
         }
         double kiihtyneisyyskeskari=(double)kiihtyneisyyslaskuri/(double)paivaukset.size();
-        kiihtyneisyyskeskari = Double.valueOf(df.format(kiihtyneisyyskeskari));
+        kiihtyneisyyskeskari = ((double)((int)(kiihtyneisyyskeskari *100.0)))/100.0;
+        //kiihtyneisyyskeskari = Double.valueOf(df.format(kiihtyneisyyskeskari));
         TextView agitationTv = (TextView) findViewById(R.id.agitationTv);
         agitationTv.setText(""+kiihtyneisyyskeskari);
 
@@ -101,7 +104,8 @@ public class AverageDay extends AppCompatActivity {
             arsytyslaskuri+=p.getIrritation();
         }
         double arsytyskeskari=(double)arsytyslaskuri/(double)paivaukset.size();
-        arsytyskeskari = Double.valueOf(df.format(arsytyskeskari));
+        arsytyskeskari = ((double)((int)(arsytyskeskari *100.0)))/100.0;
+        //arsytyskeskari = Double.valueOf(df.format(arsytyskeskari));
         TextView irritationTv = (TextView) findViewById(R.id.irritationTv);
         irritationTv.setText(""+arsytyskeskari);
 
@@ -119,7 +123,8 @@ public class AverageDay extends AppCompatActivity {
             ahdistuslaskuri+=p.getAnxiety();
         }
         double ahdistuskeskari=(double)ahdistuslaskuri/(double)paivaukset.size();
-        ahdistuskeskari = Double.valueOf(df.format(ahdistuskeskari));
+        ahdistuskeskari = ((double)((int)(ahdistuskeskari *100.0)))/100.0;
+       // ahdistuskeskari = Double.valueOf(df.format(ahdistuskeskari));
         TextView anxietyTv = (TextView) findViewById(R.id.anxietyTv);
         anxietyTv.setText(""+ahdistuskeskari);
     }
