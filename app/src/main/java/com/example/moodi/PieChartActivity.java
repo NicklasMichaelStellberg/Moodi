@@ -47,14 +47,13 @@ public class PieChartActivity extends AppCompatActivity {
         pieChart.setBackgroundColor(20991);
         List<PieEntry> entries = new ArrayList<>();
         int i= 1;
-        for (Paivaus p:paivaukset
+        for (Paivaus p:paivaukset //arvojen lataus.
         ) {entries.add(new PieEntry(i,p.getDepression()));
             entries.add(new PieEntry(i,p.getAgitation()));
                 entries.add(new PieEntry(i,p.getIrritation()));
                         entries.add(new PieEntry(i, p.getAnxiety()));
-                    
             i++;
-        }
+        } //Piechartin styleä pitäisi vielä muuttaa, täyttyy turhalla dummy-arvoilla.
 
         PieDataSet set = new PieDataSet(entries, "");
         set.setColors(ColorTemplate.MATERIAL_COLORS);
