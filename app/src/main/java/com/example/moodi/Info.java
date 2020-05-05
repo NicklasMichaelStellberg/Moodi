@@ -33,10 +33,6 @@ public class Info extends AppCompatActivity {
         Intent intent = new Intent(this, BarChartActivity.class);
         startActivity(intent);
     }
-    public void calendar(View view) {
-        Intent intent = new Intent(this, Calendar.class);
-        startActivity(intent);
-    }
     public void pieChart(View view) {
         Intent intent = new Intent(this, PieChartActivity.class);
         startActivity(intent);
