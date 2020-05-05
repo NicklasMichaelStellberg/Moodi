@@ -22,7 +22,7 @@ import java.util.List;
  * @version 0.1 5/2020
  */
 
-public class BarChartActivity extends AppCompatActivity {
+public class BarChartDepressionActivity extends AppCompatActivity {
     /**
      * Luotu  Philipp Jahodan MpAndroidChart kirjastolla.
      * @param BarChartilla luodaan paalukaavio.
@@ -43,7 +43,7 @@ public class BarChartActivity extends AppCompatActivity {
         List<BarEntry> entries = new ArrayList<>();
         int i= 1;
         for (Paivaus p:paivaukset
-        ) {entries.add(new BarEntry(i,p.getSleep()));
+        ) {entries.add(new BarEntry(i,p.getDepression()));
             i++;
         }
 
@@ -82,10 +82,4 @@ public class BarChartActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AverageDay.class);
         startActivity(intent);
     }
-    public void barChartDepression(View view) {
-        Intent intent = new Intent(this, BarChartDepressionActivity.class);
-        startActivity(intent);
-    }
 }
-
-

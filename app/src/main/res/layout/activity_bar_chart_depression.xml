@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B1F6FF"
-    tools:context=".BarChartActivity">
+    tools:context=".BarChartDepressionActivity">
 
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/barChart"
@@ -95,7 +95,6 @@
         android:layout_marginLeft="28dp"
         android:layout_marginTop="18dp"
         android:layout_marginBottom="88dp"
-        android:onClick="barChartDepression"
         android:text="Depression"
         app:layout_constraintBottom_toTopOf="@+id/btnMain"
         app:layout_constraintEnd_toStartOf="@+id/sleepButton"
