@@ -8,7 +8,7 @@ import android.view.View;
 
 /**
  * Luokka näyttää kalenterin. Keskeneräisen ominaisuuden takia turha luokka.
- * @author
+ * @author Nicklas Stellberg
  * @version 0.1 5/2020
  */
 
