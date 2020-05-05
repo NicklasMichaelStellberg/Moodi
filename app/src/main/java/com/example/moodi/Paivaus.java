@@ -24,7 +24,7 @@ import org.json.JSONObject;
 
 /**
  * luokan olio vastaa aina yhden päivän kirjattuja tietoja
- * @author
+ * @author Oskari Toivonen
  * @version 0.1 5/2020
  */
 public class Paivaus extends MainActivity {

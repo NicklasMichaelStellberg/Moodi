@@ -8,7 +8,7 @@ import android.view.View;
 
 /**
  * Luokka sisältää siirtymät toisiin aktiviteetteihin
- * @author
+ * @author Nicklas Stellberg
  * @version 0.1 5/2020
  */
 public class Info extends AppCompatActivity {
