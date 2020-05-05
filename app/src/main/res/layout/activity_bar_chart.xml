@@ -25,24 +25,28 @@
         android:id="@+id/btnBarChart"
         android:layout_width="54dp"
         android:layout_height="48dp"
+        android:layout_marginTop="87dp"
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/analytics_bars"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnPieChart" />
+        app:layout_constraintEnd_toStartOf="@+id/btnPieChart"
+        app:layout_constraintTop_toBottomOf="@+id/sleepButton" />
 
     <Button
         android:id="@+id/btnPieChart"
         android:layout_width="54dp"
         android:layout_height="48dp"
+        android:layout_marginTop="87dp"
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/light_analytics_pie2"
         android:onClick="pieChart"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnInfo" />
+        app:layout_constraintEnd_toStartOf="@+id/btnInfo"
+        app:layout_constraintTop_toBottomOf="@+id/irritationButton" />
 
     <Button
         android:id="@+id/btnInfo"
@@ -50,11 +54,13 @@
         android:layout_height="48dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
+        android:layout_marginTop="87dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/light_question_help_square"
         android:onClick="info"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline" />
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/agitationButton" />
 
     <Button
         android:id="@+id/btnAverageDay"
@@ -62,23 +68,33 @@
         android:layout_height="48dp"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginRight="61dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/mask_star"
         android:onClick="averageDay"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnInfo" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnInfo"
+        app:layout_constraintTop_toBottomOf="@+id/agitationButton" />
 
     <Button
         android:id="@+id/btnMain"
         android:layout_width="54dp"
         android:layout_height="48dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="87dp"
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/light_house_chimney"
         android:onClick="mainActivity"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnBarChart" />
+        app:layout_constraintEnd_toStartOf="@+id/btnBarChart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/depisnappi" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
