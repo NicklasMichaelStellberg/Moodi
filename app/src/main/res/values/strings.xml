@@ -25,10 +25,10 @@
     <string name="aika">20.4.2020</string>
     <string name="Nappi">OK</string>
     <string name="uni">Uni</string>
-    <string name="masentuneisuus">Masentuneisuus</string>
-    <string name="kiihtyvyys">Kiihtyvyys</string>
-    <string name="arsytys">Ärsytys</string>
-    <string name="ahdistus">Ahdistus</string>
+    <string name="masentuneisuus">Mas</string>
+    <string name="kiihtyvyys">Kii</string>
+    <string name="arsytys">Ärs</string>
+    <string name="ahdistus">Ahd</string>
 
 
 </resources>

@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BarChartDepressionActivity"></activity>
         <activity android:name=".AverageDay" />
         <activity android:name=".Info" />
         <activity android:name=".PieChartActivity" />
