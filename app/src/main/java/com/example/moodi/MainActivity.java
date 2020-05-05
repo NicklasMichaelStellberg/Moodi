@@ -304,6 +304,7 @@ public class MainActivity extends AppCompatActivity {
 
                     muistiinpanot = findViewById(R.id.tvNotes);
                     tamapaiva.setMuistiinpanot(muistiinpanot.getText().toString());
+                    tamapaiva.save(year,month,dayOfMonth,getApplicationContext());
                     /*String tunniste = "" + year + "-" + month + "-" + dayOfMonth + "_notes";
                     String muistiinpanoText = muistiinpanot.getText().toString();
                     File file = new File("data/data/com.example.moodi/files/" + tunniste+".txt"); // Luo tiedoston päivämäärä_notes.txt nimellä
