@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
@@ -42,6 +43,8 @@ public class PieChartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pie_chart);
         pieChart = findViewById(R.id.pieChart);
+        Description description = pieChart.getDescription();
+        description.setText("");
         ArrayList<Paivaus> paivaukset= Paivaus.loadall(getApplicationContext());
 
                 int laskuriD= 0;//keskarin lasku
@@ -87,8 +90,6 @@ public class PieChartActivity extends AppCompatActivity {
         pieChart.setData(data);
         pieChart.setBackgroundColor(0x0051FF);
         pieChart.invalidate();;
-
-
     }
 
 
