@@ -76,27 +76,12 @@ public class PieChartActivity extends AppCompatActivity {
         List<PieEntry> entries = new ArrayList<>();
 
 
-        entries.add(new PieEntry((float) keskariMasis));
-        entries.add(new PieEntry((float) keskariIrritation));
-        entries.add(new PieEntry((float) keskariAG));
-        entries.add(new PieEntry((float) keskariAN));
+        entries.add(new PieEntry((float) keskariMasis,"depression"));
+        entries.add(new PieEntry((float) keskariIrritation,"irritation"));
+        entries.add(new PieEntry((float) keskariAG,"agitation"));
+        entries.add(new PieEntry((float) keskariAN,"anxiety"));
 
         pieChart.setBackgroundColor(20991);
-       // List<PieEntry> entries = new ArrayList<>();
-       /* int i= 1;
-        for (Paivaus p:paivaukset //arvojen lataus.
-        ) {entries.add(new PieEntry(i,keskariMasis));
-            entries.add(new PieEntry(i,keskariIrritation));
-                entries.add(new PieEntry(i,keskariAG));
-                        entries.add(new PieEntry(i, keskariAN));
-            i++;
-        } //Piechartin styleä pitäisi vielä muuttaa, täyttyy turhalla dummy-arvoilla.*/
-
-
-
-
-
-
         PieDataSet set = new PieDataSet(entries, "");
         set.setColors(ColorTemplate.MATERIAL_COLORS);
         PieData data = new PieData(set);
