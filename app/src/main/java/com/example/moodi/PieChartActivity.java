@@ -79,10 +79,6 @@ public class PieChartActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BarChartActivity.class);
         startActivity(intent);
     }
-    public void calendar(View view) {
-        Intent intent = new Intent(this, Calendar.class);
-        startActivity(intent);
-    }
     public void info(View view) {
         Intent intent = new Intent(this, Info.class);
         startActivity(intent);

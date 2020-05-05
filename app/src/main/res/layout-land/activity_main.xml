@@ -164,25 +164,11 @@
         android:id="@+id/btnBarChart"
         android:layout_width="54dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/light_analytics_bars"
         android:onClick="barChart"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnCalendar" />
-
-    <Button
-        android:id="@+id/btnCalendar"
-        android:layout_width="54dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginRight="2dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/light_calendar_3"
-        android:onClick="calendar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline" />
+        tools:layout_editor_absoluteX="251dp" />
 
     <Button
         android:id="@+id/btnPieChart"
