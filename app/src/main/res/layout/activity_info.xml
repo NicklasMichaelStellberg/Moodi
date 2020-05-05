@@ -11,34 +11,36 @@
         android:id="@+id/btnBarChart"
         android:layout_width="54dp"
         android:layout_height="48dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/light_analytics_bars"
         android:onClick="barChart"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="91dp" />
+        app:layout_constraintEnd_toStartOf="@+id/btnPieChart" />
 
     <Button
         android:id="@+id/btnPieChart"
         android:layout_width="54dp"
         android:layout_height="48dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/light_analytics_pie2"
         android:onClick="pieChart"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline" />
+        app:layout_constraintEnd_toStartOf="@+id/btnInfo" />
 
     <Button
         android:id="@+id/btnInfo"
         android:layout_width="54dp"
         android:layout_height="48dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/question_help_square"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnPieChart" />
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
 
     <Button
         android:id="@+id/btnAverageDay"
