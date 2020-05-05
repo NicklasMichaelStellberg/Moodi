@@ -74,12 +74,11 @@ public class PieChartActivity extends AppCompatActivity {
 
 
         List<PieEntry> entries = new ArrayList<>();
-
-
-        entries.add(new PieEntry((float) keskariMasis,"depression"));
-        entries.add(new PieEntry((float) keskariIrritation,"irritation"));
+        
         entries.add(new PieEntry((float) keskariAG,"agitation"));
         entries.add(new PieEntry((float) keskariAN,"anxiety"));
+        entries.add(new PieEntry((float) keskariIrritation,"irritation"));
+        entries.add(new PieEntry((float) keskariMasis,"depression"));
 
         pieChart.setBackgroundColor(20991);
         PieDataSet set = new PieDataSet(entries, "");
