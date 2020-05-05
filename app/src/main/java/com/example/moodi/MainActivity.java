@@ -29,7 +29,7 @@ import com.google.gson.Gson;
 
 
 /**
- * Luokka sisältää
+ * Aktiviteetti sisältää sovelluksen päänäkymän keskeiset metodit ja tässä näkymässä otetaan vastaan käyttäjän syöttämää dataa
  * @author Oskari Toivonen
  * @version 0.1 5/2020
  */
@@ -71,7 +71,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
     /**
-     * date_n asetetaan tekstikenttään tämäpäivä
+     * date_n asetetaan tekstikenttään järjestelmän ajasta nykyinen päivämäärä
+     * Etsitään eri UI elmentit, jotta niitä voidaan käyttää koodissa.
+     * datePicker avaa kalenterinäkymän, josta voidaan avata nykyinen tai mennyt päivämäärä
+     * Kuukausien indeksointi alkaa nollasta javavassa ja sen arvoon lisätään 1, jotta se vastaa totuullista arvoa
+     * tamapaiva.save tallentaa aikaisemman päivän arvot ja muuttaa valittua päivämäärää uuteen valittuun päivämäärään
+     * datepicker metodissa seurataan, mikä päivä on valittuna, jotta tallennus järjestelmä toimii oikein
      *
      * @author Oskari Toivonen
      * @version 0.1 5/2020
@@ -118,7 +123,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
+        /**
+         * RadioGroppeissa katsotaan valittu arvo ja se tallennetaan metodiin tamapaiva.setDepression
+         * */
         RadioGroup masis = (RadioGroup) findViewById(R.id.masisRadio);
         masis.check(R.id.masisRadio1);
 
@@ -154,6 +161,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        /**
+         * RadioGroppeissa katsotaan valittu arvo ja se tallennetaan metodiin tamapaiva.setAgitation
+         * */
         RadioGroup kiihtyneisyys = (RadioGroup) findViewById(R.id.kiihtyneisyysRadio);
 
         kiihtyneisyys.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -187,6 +197,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        /**
+         * RadioGroppeissa katsotaan valittu arvo ja se tallennetaan metodiin tamapaiva.setIrritation
+         * */
         RadioGroup arsutus = (RadioGroup) findViewById(R.id.arsutusRadio);
 
         arsutus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -220,6 +233,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        /**
+         * RadioGroppeissa katsotaan valittu arvo ja se tallennetaan metodiin tamapaiva.setAnxiety
+         * */
         RadioGroup ahdistus = (RadioGroup) findViewById(R.id.ahdistusRadio);
 
         ahdistus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -253,19 +269,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        /*String date_n = new SimpleDateFormat("dd.MM.yyyy", //selvitetään nykyinen päivämäärä ja asetetaan se tekstikenttään.
-                Locale.getDefault()).format(new Date());
-        aikatv = findViewById(R.id.aika);
-        aikatv.setText(date_n);
-        findViewById(R.id.datepicker).setOnClickListener(new View.OnClickListener() {//listener imagebuttonille joka avaa kalenterivalinnan
-            @Override
-            public void onClick(View v) {
-                showDatePickerDialog(); //kutsutaan päivämäärävalitsin metodia
-            }
 
-
-        });*/
-        //seekerbar
+        /**
+         * Seekbarissa katsotaan valittu arvo ja se tallennetaan metodiin tamapaiva.setSleep
+         * */
         sleepText = (TextView) findViewById(R.id.sleepTv); //määritetään seeker bar ja laitetaan sen maksimiarvoksi 24(h)
         sleepSeek = (SeekBar) findViewById(R.id.sleepSeek);
         sleepSeek.setMax(24);
@@ -287,7 +294,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        // Muistiinpanojen tallennus napista tekstitiedostoon.
+        /**
+         * Muistiinpanojen tallennus napista tekstitiedostoon.
+         */
         Button buttonSave = (Button)findViewById(R.id.btOk);
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override

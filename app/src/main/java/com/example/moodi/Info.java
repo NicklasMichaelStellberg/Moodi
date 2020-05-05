@@ -7,15 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 
 /**
- * Luokka sisältää siirtymät toisiin aktiviteetteihin
+ * Aktiviteetti sisältää siirtymät toisiin aktiviteetteihin
  * @author Nicklas Stellberg
  * @version 0.1 5/2020
  */
 public class Info extends AppCompatActivity {
     /**
      * Luokka näyttää infoa sovelluksesta.
-     * @author
-     * @version 0.1 5/2020
      * @param savedInstanceState
      */
 
