@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
@@ -41,14 +42,19 @@ public class PieChartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pie_chart);
         pieChart = findViewById(R.id.pieChart);
-        List<PieEntry> entries = new ArrayList<>();
+        ArrayList<Paivaus> paivaukset= Paivaus.loadall(getApplicationContext());
 
         pieChart.setBackgroundColor(20991);
-
-        entries.add(new PieEntry(10, "Depression"));
-        entries.add(new PieEntry(20, "Agitation"));
-        entries.add(new PieEntry(40, "Irritation"));
-        entries.add(new PieEntry(30, "Anxiety"));
+        List<PieEntry> entries = new ArrayList<>();
+        int i= 1;
+        for (Paivaus p:paivaukset
+        ) {entries.add(new PieEntry(i,p.getDepression()));
+            entries.add(new PieEntry(i,p.getAgitation()));
+                entries.add(new PieEntry(i,p.getIrritation()));
+                        entries.add(new PieEntry(i, p.getAnxiety()));
+                    
+            i++;
+        }
 
         PieDataSet set = new PieDataSet(entries, "");
         set.setColors(ColorTemplate.MATERIAL_COLORS);
@@ -61,13 +67,11 @@ public class PieChartActivity extends AppCompatActivity {
     }
 
 
-    public void PieEntry (int value, String label){
-        this.value = value;
-        this.label = label;
-    }
+
     /**
      * Alanapit eri activityihin
      */
+
     public void mainActivity(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
@@ -88,4 +92,6 @@ public class PieChartActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AverageDay.class);
         startActivity(intent);
     }
+
+
 }
