@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
@@ -37,6 +38,8 @@ public class BarChartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bar_chart);
         barChart = findViewById(R.id.barChart);
+        Description description = barChart.getDescription();
+        description.setText("");
         final Button depisbutton = findViewById(R.id.depisnappi);
         final Button sleepbutton = findViewById(R.id.sleepButton);
         final Button irritationbutton = findViewById(R.id.irritationButton);
